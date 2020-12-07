@@ -51,6 +51,78 @@
         }
       }
       .side-bar-info {
+        div{
+          width: 100%;
+        }
+        .author-container {
+          display: flex;
+          flex-direction: column;
+          .author-name {
+            display: flex;
+            justify-content: space-evenly;
+
+            width: 100%;
+            p{
+              font-family: "Rubik" , sans-serif;
+              font-size: 15px;
+              color: #0A246A;
+              font-weight: 500;
+
+            }
+          }
+          .membre {
+            p {
+              font-family: "Roboto Mono" , monospace;
+              color: #358FFE;
+              font-size: 12px;
+            }
+          }
+        }
+        .about-author {
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 20px;
+
+          h3 {
+            font-family: "Roboto Mono" , monospace;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            color: #7A7FAC;
+
+          }
+
+
+        }
+        .author-photos {
+
+        }
+        .navigation-container {
+          .tagger {
+            .tag-wrapper {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: flex-start;
+            }
+            .tag-title {
+              h4 {
+                font-family: "Rubik" , sans-serif;
+                font-size: 18px;
+                font-weight: bold;
+                color: #4D5491;
+              }
+            }
+            span {
+              padding: 2px;
+              margin: 5px;
+              background-color: #EBF4FF;
+              color: #358FFE;
+              position: relative;
+              font-size: 13px;
+              font-family: "Rubik" , sans-serif;
+            }
+          }
+
+        }
         p {
           color: #666666;
           line-height: 18px;
@@ -93,9 +165,48 @@
           font-family: "Roboto Mono" , monospace;
           display: flex;
           justify-content: space-between;
+          .date {
+
+          }
+          .tag-container {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            flex-wrap: wrap;
+
+            .tag {
+            margin-right: 5px;
+              position: relative;
+              display: block;
+              p {
+              color: #358FFE;
+              font-family: "Roboto Mono" , monospace;
+              font-size: 12px;
+              font-weight: 500;
+
+              }
+
+            }
+          }
         }
+      .article-body {
+        p {
+          font-family: "Rubik" , sans-serif;
+          font-size: 15px;
+          color: #666666;
+          font-weight: 300;
+        }
+      }
       footer {
         display: flex;
+        justify-content: space-around;
+        .count-msg {
+          display: flex;
+          align-items: center;
+          img {
+            width: 100%;
+          }
+        }
       }
         .article-image {
             img {

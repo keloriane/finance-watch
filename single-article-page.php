@@ -51,15 +51,72 @@ get_header();
                 </p>
             </div>
             <div class="side-bar-info l-col-10 d-col-5 t-col-19 t-grid m-grid">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eleifend velit non eros bibendum volutpat. Etiam eget urna luctus, elementum elit vitae, hendrerit quam. Suspendisse feugiat magna commodo justo fringilla finibus. Quisque tellus nulla, dictum ut luctus at, maximus nec est. Curabitur in dui eu mauris consequat facilisis et id justo. Duis arcu ligula, sollicitudin in tempor ac, convallis vel nibh. Morbi sit amet magna suscipit, tristique urna id, tincidunt diam. Sed convallis massa magna. Proin faucibus arcu turpis, a tempor eros vestibulum sed. Sed luctus interdum dui sit amet finibus. Nulla facilisi.
+                   <div class="author-container">
+                       <img src="<?php echo get_template_directory_uri(); ?>/images/author.png" alt="">
+                       <p>
+                           Author
+                       </p>
+                       <div class="author-name">
+                           <p>
+                               Christian
+                           </p>
+                           <p>
+                                Stiefmuelle
+                           </p>
+                       </div>
+                       <div class="membre">
+                          <p>Membre finance watch</p>
+                       </div>
 
-                        Suspendisse quis nunc accumsan, dictum felis id, lacinia neque. Suspendisse malesuada dolor pharetra mi commodo dignissim. Sed facilisis, nibh at cursus convallis, lectus ligula suscipit magna, eget vulputate ipsum risus sed lectus. Nunc metus nibh, ultricies ac dolor ut, egestas laoreet magna. Pellentesque est nisl, convallis vitae lobortis vitae, convallis quis magna. Morbi sollicitudin fringilla elementum. Nullam lobortis purus sit amet tristique vestibulum. Curabitur pretium sapien eu auctor mollis. Duis sit amet nulla laoreet, accumsan massa in, consequat felis. Suspendisse potenti. Morbi imperdiet maximus magna, et mattis elit dapibus at. Etiam dignissim dolor quis orci auctor, at ullamcorper augue viverra. Mauris porta, urna vel cursus vulputate, quam dui mollis sapien, vel auctor lectus urna sit amet ipsum. Mauris est tortor, faucibus et mauris sed, finibus gravida augue.
+                   </div>
+                    <div class="about-author">
+                        <h3>A propos de l'auteur</h3>
+                        <p>
+                            Sandy Winkler Madar a commencé sa carrière comme travailleuse de rue, essayant d'aider les criminels actuels et futurs à avoir une vie meilleure.
+                            Elle a fondé Din Retshjaelp (l'aide juridique sociale) et est toujours la directrice générale de cette organisation depuis lors. Elle travaille à la modification des lois et de la législation.
+                            En novembre 2018, Sandy Madar est devenue présidente du Réseau européen des dettes des consommateurs (ECDN).
 
-                        Aenean tempus, libero et facilisis vehicula, dolor nisl euismod massa, non rhoncus magna massa sit amet purus. Mauris quis accumsan elit. Etiam non quam nec tortor dapibus maximus. Maecenas nibh turpis, finibus at nulla eget, pharetra condimentum sem. Sed volutpat turpis vitae augue rutrum rhoncus vitae a nibh. Donec consectetur, nunc nec mattis congue, ipsum urna iaculis orci, vel sollicitudin nunc orci eget elit. Sed euismod tempus arcu at tristique. Cras molestie vehicula urna, a congue dui congue at. Sed et eros id odio consequat bibendum vel sit amet velit. Praesent dolor nisi, porttitor vitae enim vel, tincidunt blandit tellus. Quisque tincidunt velit id justo placerat egestas. Etiam nec vehicula libero. Aenean ultricies turpis diam, non dapibus libero consequat nec. Suspendisse tristique, sapien eleifend scelerisque dictum, orci est malesuada elit, vel dapibus mauris ipsum eget urna.
+                        </p>
 
-                        Nullam faucibus varius sapien vitae scelerisque. Duis non arcu fringilla enim venenatis consequat.
-                    </p>
+                    </div>
+                    <div class="auhor-photos">
+
+                    </div>
+                <div class="navigation-container">
+                    <div class="associated-tags tagger">
+                        <div class="tag-title">
+                            <h4>
+                                Tags associées
+                            </h4>
+                        </div>
+                        <div class="tag-wrapper">
+                        <span class="tags">Finance Durable (10)</span>
+                        <span class="tags">Banque (2)</span>
+                        <span class="tags">Commerce (15)</span>
+                        <span class="tags">Les pensions et les assurances (10)</span>
+                        <span class="tags">Fintech (3)</span>
+                        <span class="tags">Legislation (2)</span>
+                        </div>
+                    </div>
+
+                    <div class="most-used-tags tagger">
+                        <div class="tag-title">
+                            <h4>
+                                Tags associées
+                            </h4>
+                        </div>
+                        <div class="tag-wrapper">
+                            <span class="tags">Finance Durable (10)</span>
+                            <span class="tags">Banque (2)</span>
+                            <span class="tags">Commerce (15)</span>
+                            <span class="tags">Les pensions et les assurances (10)</span>
+                            <span class="tags">Fintech (3)</span>
+                            <span class="tags">Legislation (2)</span>
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
 
 
@@ -124,8 +181,8 @@ get_header();
             </div>
             <footer>
                 <div class="count-msg">
-                    <img src="" alt="">
-                    <p>count</p>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/msg.png" alt="">
+                    <p>| 10</p>
                 </div>
                 <div class="author">
                     Par : Nom de l'auteur
@@ -148,6 +205,14 @@ get_header();
                     <div class="tag-container">
                     <span class="tag">
                         <p>tagname</p>
+                    </span>  <span class="tag">
+                        <p>tagname</p>
+                    </span>  <span class="tag">
+                        <p>tagname</p>
+                    </span>  <span class="tag">
+                        <p>tagname</p>
+                    </span>  <span class="tag">
+                        <p>tagname</p>
                     </span>
                     </div>
                 </header>
@@ -158,8 +223,8 @@ get_header();
                 </div>
                 <footer>
                     <div class="count-msg">
-                        <img src="" alt="">
-                        <p>count</p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/msg.png" alt="">
+                        <p>| 10</p>
                     </div>
                     <div class="author">
                         Par : Nom de l'auteur
@@ -192,8 +257,8 @@ get_header();
                 </div>
                 <footer>
                     <div class="count-msg">
-                        <img src="" alt="">
-                        <p>count</p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/msg.png" alt="">
+                        <p>| 10</p>
                     </div>
                     <div class="author">
                         Par : Nom de l'auteur

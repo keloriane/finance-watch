@@ -13,7 +13,7 @@ get_header();
         </h2>
 
     </div>
-    <div class="blog-subtitle">
+    <div class="blog-subtitle l-col-18 d-col-18 t-col-15 ">
         <h3>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
         </h3>
@@ -109,4 +109,30 @@ get_header();
 
         </div>
     </section>
+    <section class="action-finance-watch">
+        <div class="section-title">
+            <h2>
+                PARTICIPER À L'ACTION DE FINANCE WATCH
+            </h2>
+
+        </div>
+        <div class="member-card">
+            <h3>
+                DEVENIR MEMBRE DE FINANCE WATCH
+            </h3>
+            <p>
+                Vous êtes expert en finance ou votre organisation lutte pour une société plus juste, verte et inclusive ? Rejoignez-nous !
+            </p>
+        </div>
+        <div class="donation-card">
+            <h3>
+                NOUS SOUTENIR EN FAISANT UN DON
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+            </p>
+
+        </div>
+    </section>
+
 </main>
