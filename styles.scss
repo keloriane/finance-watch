@@ -1,0 +1,86 @@
+/*
+Theme Name: Finance Watch
+Theme URI: http://local.finance-watch/
+Author: Koriane
+Author URI: https://wordpress.org/
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.3
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwenty
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@300;500;600&display=swap');
+@import "./css/pages/_about.scss";
+@import "./css/pages/_global.scss";
+@import "./css/pages/_grid.scss";
+@import "./css/pages/_reset.scss";
+@import "./css/pages/_single.scss";
+@import "./css/pages/_blog.scss";
+
+
+
+
+
+
+.wrapper {
+  display: flex;
+
+}
+
+body{}
+
+
+
+.highlights{
+
+}
+
+.main-highlight-middle{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.secondary-highlights{
+
+}
+
+.highlight{
+  background:white;
+  position: relative;
+  min-width: 276px;
+  width: 276px;
+  margin-right:50px ;
+}
+
+.highlight-middle{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.highlight-middle-excerpt p {
+  color: #4D5491;
+}
+
+.highlight-featured-image-wrapper{
+  height: 142px;
+  overflow: hidden;
+}
+
+.highlight-featured-image{
+  width: 100%;
+}
+
+.highlight-bottom{
+  display: flex;
+  flex-direction: row;
+}

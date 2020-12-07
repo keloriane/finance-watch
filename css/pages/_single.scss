@@ -1,0 +1,109 @@
+.post-details {
+  .main-article {
+    .article-header {
+    .title-container {
+      margin: 0 auto;
+      h3 {
+        font-family: "Rubik" , sans-serif;
+        font-weight: 600;
+        color: #212975;
+        font-size: 46px;
+
+      }
+    }
+    }
+    .article-body {
+
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      .article {
+        img{
+          width: 100%;
+          margin-bottom: 50px;
+        }
+
+        h2 {
+          font-family: "Rubik" , sans-serif;
+          font-weight: 500;
+          color: #212975;
+          text-transform: uppercase;
+          padding-top: 50px;
+          padding-bottom: 25px;
+
+        }
+        h3 {
+          font-size: 18px;
+          font-family: "Rubik" , sans-serif;
+          color: #7A7FAC;
+          line-height: 32px;
+        }
+        p{
+          color: #666666;
+          line-height: 18px;
+          letter-spacing: 0.98px;
+          font-size: 15px;
+          font-family: "Rubik" , sans-serif;
+          font-weight: 300;
+
+
+        }
+      }
+      .side-bar-info {
+        p {
+          color: #666666;
+          line-height: 18px;
+          letter-spacing: 0.98px;
+          font-size: 15px;
+          font-family: "Rubik" , sans-serif;
+          font-weight: 300;
+        }
+      }
+    }
+    .social-media {
+      margin: 0 auto;
+      .media-call {
+        display: flex;
+        justify-content: space-evenly;
+        li {
+          a{
+            svg {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+  .associate-article {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a{
+    article {
+        header {
+          height: 50px;
+          font-family: "Roboto Mono" , monospace;
+          display: flex;
+          justify-content: space-between;
+        }
+      footer {
+        display: flex;
+      }
+        .article-image {
+            img {
+              width: 100%;
+            }
+        }
+    }
+
+    }
+  }
+}
