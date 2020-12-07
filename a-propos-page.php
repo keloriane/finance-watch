@@ -8,11 +8,11 @@
         <h2>Finance Watch is a European NGO founded in reaction to the last <br> financial crisis, when policymakers realised that therewas no <br> counter-power to the lobby of finance</h2>
     </div>
 </header>
-<div class="about-blog-wrapper d-grid">
-    <div class="image-blog l-col-12 t-col-12 m-col-10 d-col-10">        
-        <img src="<?php echo get_template_directory_uri(); ?>images/computer.png" alt="">
+<div class="about-blog-wrapper d-grid l-col-24 t-col-24 m-grid d-col-24">
+    <div class="image-blog l-col-12 t-col-21 m-col-21 d-col-10">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/team.jpg" alt="">
     </div>
-    <div class="text-blog d-col-12 l-col-12 t-col-10 m-col-10 center">
+    <div class="text-blog d-col-10 l-col-10 t-col-21 m-col-21 center">
         <h3>
             Pourquoi le blog
         </h3>

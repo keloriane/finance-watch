@@ -37,36 +37,34 @@ header {
   .about-blog-wrapper .image-blog img {
     width: 100%;
     height: auto; }
-  .about-blog-wrapper .text-blog {
-    margin-left: 60px; }
-    .about-blog-wrapper .text-blog h3 {
-      font-family: "Roboto Mono",sans-serif;
-      font-size: 1.8rem;
-      font-weight: 500;
-      color: #212975;
-      text-transform: uppercase;
-      margin-bottom: 30px; }
-    .about-blog-wrapper .text-blog .text-wrapper {
-      margin-bottom: 30px; }
-      .about-blog-wrapper .text-blog .text-wrapper p {
-        font-size: 14px; }
-    .about-blog-wrapper .text-blog .call-to-action {
-      position: relative;
-      display: inline-block;
-      border: 2px solid #1295D8;
-      border-radius: 3px;
-      height: 50px;
-      margin-right: 18px;
-      line-height: 46px;
-      font-weight: 500;
-      font-size: 1.4rem;
-      letter-spacing: .1em;
-      color: #1295D8;
-      white-space: nowrap;
-      overflow: hidden;
-      z-index: 1;
-      padding-left: 40px;
-      padding-right: 34px; }
+  .about-blog-wrapper .text-blog h3 {
+    font-family: "Roboto Mono",sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #212975;
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+  .about-blog-wrapper .text-blog .text-wrapper {
+    margin-bottom: 30px; }
+    .about-blog-wrapper .text-blog .text-wrapper p {
+      font-size: 14px; }
+  .about-blog-wrapper .text-blog .call-to-action {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #1295D8;
+    border-radius: 3px;
+    height: 50px;
+    margin-right: 18px;
+    line-height: 46px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: .1em;
+    color: #1295D8;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+    padding-left: 40px;
+    padding-right: 34px; }
 
 .vision-container .list-container {
   display: flex;
@@ -849,7 +847,8 @@ textarea {
     justify-content: space-around; }
     .post-details .associate-article a article footer .count-msg {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      justify-content: space-around; }
       .post-details .associate-article a article footer .count-msg img {
         width: 100%; }
   .post-details .associate-article a article .article-image img {

@@ -181,8 +181,8 @@ get_header();
             </div>
             <footer>
                 <div class="count-msg">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/msg.png" alt="">
-                    <p>| 10</p>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/msg.svg" alt="">
+                    <p> 10</p>
                 </div>
                 <div class="author">
                     Par : Nom de l'auteur
@@ -223,7 +223,7 @@ get_header();
                 </div>
                 <footer>
                     <div class="count-msg">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/msg.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/msg.svg" alt="">
                         <p>| 10</p>
                     </div>
                     <div class="author">
@@ -257,7 +257,7 @@ get_header();
                 </div>
                 <footer>
                     <div class="count-msg">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/msg.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/msg.svg" alt="">
                         <p>| 10</p>
                     </div>
                     <div class="author">
