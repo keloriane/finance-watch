@@ -1,0 +1,41 @@
+header {
+
+.header-wrapper {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  .inner-header {
+    width: 100vw;
+    background-color: #0A246A;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      ul {
+        width: 540px;
+        display: flex;
+        justify-content: space-evenly;
+        li {
+          a {
+            color: white;
+            text-transform: uppercase;
+            font-size: .8rem;
+            font-family: "Roboto Mono" , monospace;
+            font-weight: 800;
+          }
+        }
+      }
+    }
+  }
+  .sub-header {
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0px 15px 11px rgba(0, 0, 0, 0.2);
+
+  }
+}
+}
