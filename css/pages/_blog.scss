@@ -1,0 +1,107 @@
+.blog-partage {
+  header {
+    .blog-title-container {
+      h2 {
+        font-weight: bold;
+      }
+    }
+    .blog-subtitle {
+      margin: 0 auto;
+      h3{
+        font-family: "Rubik" , sans-serif;
+        font-weight: 300;
+        color: #0A246A;
+      }
+    }
+  }
+  .header-article {
+    display: flex;
+      margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .image-article{
+      img {
+        width: 100%;
+      }
+
+    }
+    .text-article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+        h3 {
+          font-family: "Roboto Mono" , monospace;
+          font-size: 18px;
+          color: #0A246A;
+
+        }
+        p {
+          font-family: "Rubik" , sans-serif;
+          color: #666666;
+          line-height: 27px;
+          font-size: 15px;
+          font-weight: 300;
+        }
+    }
+  }
+}
+
+.debat {
+  background-color: #F3F8FF;
+  padding-top: 100px;
+  .section-title {
+    padding-bottom: 50px;
+    h2{
+      color: #212975;
+      font-size: 23px ;
+      text-transform: uppercase;
+      font-family: "Rubik" , sans-serif;
+      text-align: center ;
+    }
+  }
+  .card-container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .card{
+      margin: 0 auto;
+      background-color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 30px;
+      padding-right: 30px;
+      height: 300px;
+      position: relative;
+      img {
+        position: absolute;
+        top: -14%;
+        left: 36%;
+      }
+      .card-title {
+        h3 {
+          font-family: "Roboto Mono" , monospace;
+          color: #0A246A;
+          margin-top: 100px;
+
+        }
+
+
+      }
+      .card-text {
+        p {
+
+            font-family: "Rubik" , sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+          color: #666666;
+
+        }
+      }
+
+    }
+  }
+}

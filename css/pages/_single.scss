@@ -1,0 +1,222 @@
+.post-details {
+  .main-article {
+    .article-header {
+    .title-container {
+      margin: 0 auto;
+      h3 {
+        font-family: "Rubik" , sans-serif;
+        font-weight: 600;
+        color: #212975;
+        font-size: 46px;
+
+      }
+    }
+    }
+    .article-body {
+
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      .article {
+        img{
+          width: 100%;
+          margin-bottom: 50px;
+        }
+
+        h2 {
+          font-family: "Rubik" , sans-serif;
+          font-weight: 500;
+          color: #212975;
+          text-transform: uppercase;
+          padding-top: 50px;
+          padding-bottom: 25px;
+
+        }
+        h3 {
+          font-size: 18px;
+          font-family: "Rubik" , sans-serif;
+          color: #7A7FAC;
+          line-height: 32px;
+        }
+        p{
+          color: #666666;
+          line-height: 18px;
+          letter-spacing: 0.98px;
+          font-size: 15px;
+          font-family: "Rubik" , sans-serif;
+          font-weight: 300;
+
+
+        }
+      }
+      .side-bar-info {
+        div{
+          width: 100%;
+        }
+        .author-container {
+          display: flex;
+          flex-direction: column;
+          .author-name {
+            display: flex;
+            justify-content: space-evenly;
+
+            width: 100%;
+            p{
+              font-family: "Rubik" , sans-serif;
+              font-size: 15px;
+              color: #0A246A;
+              font-weight: 500;
+
+            }
+          }
+          .membre {
+            p {
+              font-family: "Roboto Mono" , monospace;
+              color: #358FFE;
+              font-size: 12px;
+            }
+          }
+        }
+        .about-author {
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 20px;
+
+          h3 {
+            font-family: "Roboto Mono" , monospace;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            color: #7A7FAC;
+
+          }
+
+
+        }
+        .author-photos {
+
+        }
+        .navigation-container {
+          .tagger {
+            .tag-wrapper {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: flex-start;
+            }
+            .tag-title {
+              h4 {
+                font-family: "Rubik" , sans-serif;
+                font-size: 18px;
+                font-weight: bold;
+                color: #4D5491;
+              }
+            }
+            span {
+              padding: 2px;
+              margin: 5px;
+              background-color: #EBF4FF;
+              color: #358FFE;
+              position: relative;
+              font-size: 13px;
+              font-family: "Rubik" , sans-serif;
+            }
+          }
+
+        }
+        p {
+          color: #666666;
+          line-height: 18px;
+          letter-spacing: 0.98px;
+          font-size: 15px;
+          font-family: "Rubik" , sans-serif;
+          font-weight: 300;
+        }
+      }
+    }
+    .social-media {
+      margin: 0 auto;
+      .media-call {
+        display: flex;
+        justify-content: space-evenly;
+        li {
+          a{
+            svg {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+  .associate-article {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a{
+    article {
+        header {
+          height: 50px;
+          font-family: "Roboto Mono" , monospace;
+          display: flex;
+          justify-content: space-between;
+          .date {
+
+          }
+          .tag-container {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            flex-wrap: wrap;
+
+            .tag {
+            margin-right: 5px;
+              position: relative;
+              display: block;
+              p {
+              color: #358FFE;
+              font-family: "Roboto Mono" , monospace;
+              font-size: 12px;
+              font-weight: 500;
+
+              }
+
+            }
+          }
+        }
+      .article-body {
+        p {
+          font-family: "Rubik" , sans-serif;
+          font-size: 15px;
+          color: #666666;
+          font-weight: 300;
+        }
+      }
+      footer {
+        display: flex;
+        justify-content: space-around;
+        .count-msg {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+        .article-image {
+            img {
+              width: 100%;
+            }
+        }
+    }
+
+    }
+  }
+}
