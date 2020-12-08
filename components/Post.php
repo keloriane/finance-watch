@@ -1,5 +1,5 @@
 <?php
-class HomePage {  
+class Post {
     function debug(){
       if($this->posts[0]){
         var_dump($this->posts[0]);
