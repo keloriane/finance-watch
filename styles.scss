@@ -25,43 +25,39 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "./css/pages/_header.scss";
 
 
-
-
-
-
 .wrapper {
   display: flex;
 
 }
 
-body{}
+body {
+}
 
 
-
-.highlights{
+.highlights {
 
 }
 
-.main-highlight-middle{
+.main-highlight-middle {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-.secondary-highlights{
+.secondary-highlights {
 
 }
 
-.highlight{
-  background:white;
+.highlight {
+  background: white;
   position: relative;
   min-width: 276px;
   width: 276px;
-  margin-right:50px ;
+  margin-right: 50px;
 }
 
-.highlight-middle{
+.highlight-middle {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -72,16 +68,16 @@ body{}
   color: #4D5491;
 }
 
-.highlight-featured-image-wrapper{
+.highlight-featured-image-wrapper {
   height: 142px;
   overflow: hidden;
 }
 
-.highlight-featured-image{
+.highlight-featured-image {
   width: 100%;
 }
 
-.highlight-bottom{
+.highlight-bottom {
   display: flex;
   flex-direction: row;
 }
