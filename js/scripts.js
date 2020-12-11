@@ -12,3 +12,16 @@ menuDisplay.addEventListener('click' , function() {
     console.log("click");
     menu.classList.add('open')
 })
+
+
+const swiper =  new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+    }
+})

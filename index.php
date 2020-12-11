@@ -58,30 +58,43 @@ $tags = get_tags();
                 <div class="homepage-sidebar-tags">
                     <h2 class="most-read-articles-list-title">NAVIGATION</h2>
                     <div class="pinned-tags">
-                        <h3 class="title">Tags épingles</h3>
+                        <h3 class="pinned-tags-title">Tags épingles</h3>
                         <div class="content">
                             <?php echo $home->renderTagsSidebar($tags); ?>
                         </div>
                     </div>
                     <div class="most-used-tags">
-                        <h3 class="title">Tags épingles</h3>
+                        <h3 class="most-used-tags-title">Tags épingles</h3>
                         <div class="content">
                             <?php echo $home->renderTagsSidebar($tags); ?>
                         </div>
                     </div>
                 </div>
                 <div class="bubble-facebook">
-                    <img class="bubble-facebook-image" src=<?= get_theme_file_uri('/images/french-map.png');?> alt="">
+                    <img class="bubble-facebook-image" src=<?= get_theme_file_uri('/images/french-map.png'); ?> alt="">
                     <div class="bubble-facebook-text">
                         <h4 class="bubble-facebook-text-title">Hey !</h4>
-                        <p class="bubble-facebook-text-content">vous voulez rejoindre la communauté des amis de Finance Watch</p>
+                        <p class="bubble-facebook-text-content">vous voulez rejoindre la communauté des amis de Finance
+                            Watch</p>
                     </div>
                     <div class="bubble-facebook-button"></div>
                 </div>
             </div>
         </div>
     </div>
+    <div>
+            <div class="pinned-article-container">
+                <div class="swiper-container">
+<!--                <h3 class="pinned-article-container-title">ARTICLES "EPINGLES"</h3>-->
+                <div class="pinned-article-wrapper d-grid l-grid t-grid m-grid">
+                    <?php $home->pinnedArticles($mostReadPosts); ?>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
-<?php ?>
+<?php get_footer() ?>
 

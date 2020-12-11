@@ -57,6 +57,18 @@ class Homepage
         echo $render;
     }
 
+    function pinnedArticles($articles)
+    {
+        $render = "";
+        foreach ($articles as $articleItem) {
+            $articleACF = get_field('custom_article', $articleItem->ID);
+            $article = (object)$articleACF;
+            $render .= $this->getPinnedArticleItem($article, $articleItem->ID);
+        };
+
+        echo $render;
+    }
+
     function getTheLink($postId)
     {
         return get_permalink($postId);
@@ -158,11 +170,12 @@ class Homepage
               </div>
               <div class="last-article-item-content">
                  <div class="last-article-item-top">
-                    <span class="date">{$article->date}</span> 
-                    <span class="vertical-line">|</span>
-                    <span class="tags">{$displayTags}</span>
+                    <span class="last-article-item-top-date">{$article->date}</span> 
+                    <span class="last-article-item-top-vertical-line">|</span>
+                    <span class="last-article-item-top-tags">{$displayTags}</span>
                   </div>
                   <div class="last-article-item-middle">
+                    <div class="last-article-item-middle-title">{$article->title}</div>
                     <div class="last-article-item-middle-excerpt">{$article->contenu}</div>
                   </div>
                   <div class="last-article-item-bottom">
@@ -172,8 +185,48 @@ class Homepage
                       </div>
                       <span class="vertical-line">|</span>
                       <div class="last-article-item-bottom-item custom-article-author">
-                        <span class="by">Par</span>
+                        <span class="last-article-item-by">Par</span>
                         <span class="last-article-item-author">{$auteur->user_nicename}</span>
+                      </div>
+                  </div>
+              </div>
+             </article>
+         </a>
+         HEREDOC;
+    }
+
+    function getPinnedArticleItem($article,$id)
+    {
+        $tags = $article->tags;
+        $auteur = (object)$article->auteur;
+        $commentsImagePath = get_theme_file_uri('/images/comments-dark.svg');
+        $displayTags = $this->renderTags($tags);
+
+        return <<<HEREDOC
+         <a href={$this->getTheLink($id)}>
+             <article class='pinned-article-item'>
+              <div class='pinned-article-item-featured-image-wrapper'>
+                <img class='pinned-article-item-featured-image' src="{$article->featured_image}" alt="">    
+              </div>
+              <div class="pinned-article-item-content">
+                 <div class="pinned-article-item-top">
+                    <span class="pinned-article-item-top-date">{$article->date}</span> 
+                    <span class="pinned-article-item-top-vertical-line">|</span>
+                    <span class="pinned-article-item-top-tags">{$displayTags}</span>
+                  </div>
+                  <div class="pinned-article-item-middle">
+                    <div class="pinned-article-item-middle-title">{$article->title}</div>
+                    <div class="pinned-article-item-middle-excerpt">{$article->contenu}</div>
+                  </div>
+                  <div class="pinned-article-item-bottom">
+                      <div class="pinned-article-item-bottom-item custom-article-comments">
+                        <img class="pinned-article-item-comment-icon" src="{$commentsImagePath}" alt="">
+                        <span class="pinned-article-item-comment-count">10</span>
+                      </div>
+                      <span class="vertical-line">|</span>
+                      <div class="pinned-article-item-bottom-item custom-article-author">
+                        <span class="pinned-article-item-by">Par</span>
+                        <span class="pinned-article-item-author">{$auteur->user_nicename}</span>
                       </div>
                   </div>
               </div>
@@ -195,9 +248,9 @@ class Homepage
               </div>
               <div class="most-read-article-item-content">
                  <div class="most-read-article-item-top">
-                    <span class="date">{$article->date}</span> 
+                    <span class="most-read-article-item-top-date">{$article->date}</span> 
                     <span class="vertical-line">|</span>
-                    <span class="tags">{$displayTags}</span>
+                    <span class="most-read-article-item-top-tags">{$displayTags}</span>
                   </div>
                   <div class="most-read-article-item-bottom">
                     <div class="last-article-item-middle-excerpt">{$article->contenu}</div>
