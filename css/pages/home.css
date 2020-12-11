@@ -1,8 +1,8 @@
 /*------------------BLOG CSS------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@300;500;600&display=swap");
 .highlights-container {
   background: #F5F9FF;
-  padding: 40px; }
+  padding: 40px;
+  height: 600px; }
 
 .highlights-title-wrapper {
   margin-bottom: 40px; }
@@ -11,7 +11,7 @@
   z-index: 0;
   display: flex;
   flex-direction: column;
-  font-family: Roboto;
+  font-family: "Roboto" , sans-serif;
   max-width: 1150px;
   margin: 0 auto; }
   @media (min-width: 1025px) {

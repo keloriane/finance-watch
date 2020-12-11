@@ -18,7 +18,6 @@ $tags = get_tags();
 ?>
 
 <?php get_header() ?>
-
 <header class="highlights-container">
     <div class="highlights-title-wrapper d-grid l-grid t-grid m-grid">
         <h2>A LA UNE</h2>
@@ -33,7 +32,7 @@ $tags = get_tags();
     </div>
 </header>
 
-<container>
+<div class="container">
     <div class="lasts-articles-container">
         <h2>Derniers articles</h2>
         <div class="lasts-articles-container-wrapper d-grid l-grid t-grid m-grid">
@@ -47,7 +46,7 @@ $tags = get_tags();
             </div>
         </div>
     </div>
-</container>
+</div>
 
 <?php
 

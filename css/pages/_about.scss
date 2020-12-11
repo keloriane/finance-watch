@@ -24,8 +24,10 @@ header {
     width: 100%;
     margin: auto;
     padding-bottom: 80px;
+    padding-top: 80px;
     justify-content: center;
     flex-wrap: wrap;
+
 
     .image-blog {
         margin: 0 auto;
@@ -84,6 +86,7 @@ header {
         display: flex;
         justify-content: center;
         align-content: space-between;
+        padding-bottom: 100px;
         ul {
             width: 711px;
             margin: 0 auto;
@@ -108,9 +111,7 @@ header {
 }
 .member-wrapper {
     background-color: #F3F8FF;
-   
-
-
+    padding-top: 100px;
     .image-svg-wrapper {
         width: 100%;
         max-width: 1280px;
@@ -165,6 +166,8 @@ header {
     width: 100%;
     max-width: 1200px;
     margin: auto;
+    padding-top: 150px;
+
     .title-container {
         margin-bottom: 40px;
         h2 {
@@ -215,22 +218,117 @@ header {
 
             
         }
+    .member-card {
+        display: flex;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-top: 0.5px dashed #88caeb;
 
-}
-    .individual-members {
-        margin: 0 auto;
-        .title-members {
-            h2 {
-                font-family:"Roboto Mono" , monospace;
-                font-size: 1rem;
-                color: #212975;
-
+        justify-content: space-between;
+        align-items: center;
+        .member-picture {
+            img {
+            border-radius: 50%;
 
             }
         }
+        .member-description {
+            margin-left: 20px;
+            .country {
+                font-family: "Roboto Mono" , monospace;
+                font-size: 11px;
+                color: #7A7FAC;
 
+            }
+            .name {
+                font-family: "Rubik" , sans-serif;
+                font-size: 15px;
+                color: #0A246A;
+            }
+            .function {
+                font-family: "Roboto Mono" , monospace;
+                font-size: 12px;
+                color: #358FFE;
+            }
+
+        }
+    }
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 100px;
+        padding-bottom: 200px;
     }
 
+}
+.country-section {
+    background-color: #0A246A;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    flex-flow: row wrap;
+
+    .text-network {
+        .title-container {
+            h2 {
+                font-family: "Rubik" , sans-serif;
+                font-size: 22px;
+                font-weight: 800;
+                color: white;
+            }
+            p {
+                font-family: "Rubik" , sans-serif;
+                font-size: 15px;
+                font-weight: 300 ;
+                color: white;
+            }
+        }
+    }
+    .overlay-card {
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        right: 0;
+        top: -15%;
+        margin:   auto;
+        padding: 50px ;
+        z-index:2;
+        .card-title {
+            font-family: "Rubik" , sans-serif;
+            font-size: 40px;
+            text-align: center;
+            color: #358FFE;
+        }
+        p {
+            font-family: "Roboto Mono" , monospace;
+            font-size: 16px;
+            color: #7A7FAC;
+
+
+        }
+        button {
+            background-color: #358FFE;
+            color: white;
+            border: none;
+            margin: 0 auto;
+        }
+    }
+.country-img-container {
+        img {
+            width: 100%;
+        }
+
+}
+
+
+
+
+
+
+    }
 
 
 

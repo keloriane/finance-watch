@@ -1,4 +1,7 @@
 header {
+  display: flex;
+  flex-direction: column;
+
 
 .header-wrapper {
   position: absolute;
@@ -11,7 +14,7 @@ header {
     height: 65px;
     display: flex;
     align-items: center;
-    z-index: -1;
+
     nav {
       display: flex;
       justify-content: flex-end;
@@ -33,9 +36,194 @@ header {
   }
   .sub-header {
     height: 100px;
+
     background-color: #fff;
-    box-shadow: 0px 15px 11px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    .logo-main {
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      .header-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h2 {
+          text-transform: uppercase;
+        }
+        h3 {
+          font-size: 13px;
+          color: #358FFE;
+          font-family: "Rubik Light" , sans-serif;
+        }
+      }
+
+    }
+    .header-action{
+      display: flex;
+      align-items: center;
+
+      .search-input {
+        -webkit-transition: width .35s ease-out,visibility .35s ease-out,opacity .35s ease-out;
+        transition: width .35s ease-out,visibility .35s ease-out,opacity .35s ease-out;
+
+        right: 0;
+        top: 0;
+        visibility: visible;
+        opacity: 1;
+        z-index: 10;
+        form {
+          .search-btn {
+            position: absolute;
+            left: 21%;
+            top: 25px;
+          }
+          .submit-btn {
+
+          }
+         input {
+           width: 41.5%;
+           background: #fff;
+           color: #ffffff;
+           line-height: 48px;
+           height: 50px;
+           border-radius: 3px;
+           border: none;
+           border-radius: 3px;
+           -webkit-appearance: none;
+           -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+           box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+         }
+        }
+      }
+      .search-button {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 3px;
+        border: 2px solid #0A246A;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+      .menu-phone {
+
+      }
+      .participate {
+        background-color: #358FFE;
+        color: white;
+      }
+      .call-to-finance {
+        background-color: #0A246A;
+        color: white;
+        border: none;
+        font-size: 14px;
+      }
+
+
+
+    }
+
 
   }
 }
+}
+
+
+
+.hamburger-menu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #0A246A;
+  top: 0;
+  z-index: 1;
+  display: none;
+  .menu-header {
+    padding-top: 100px;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    .form-container {
+      display: flex;
+      form {
+        input {
+          height: 49px;
+          background: none;
+          border: 1px solid #358FFE;
+          border-radius: 3px;
+          width: 290px;
+        }
+      }
+      button {
+        background-color: #358FFE;
+        color: #CCE3FF;
+
+      }
+    }
+  }
+  .menu-body {
+    padding-top: 100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    .menu-grid {
+      h4 {
+        font-family: "Rubik Black" , sans-serif;
+        font-size: 15px;
+        color: #358FFE;
+
+      }
+      p {
+        font-family: "Rubik Light" , sans-serif;
+        font-size: 13px;
+        color: #CCE3FF;
+
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        font-family: "Rubik" , sans-serif;
+      }
+      button{
+        color: white;
+        background-color: #358FFE;
+
+
+      }
+    }
+  }
+
+}
+.open {
+  display: block;
+}
+.menu-call-to-action {
+  display: none;
+}
+@media (max-width: 840px) {
+  .menu-call-to-action {
+    display: block;
+  }
+  header{
+    .header-wrapper {
+      .inner-header {
+        nav {
+          display: none;
+        }
+      }
+
+    }
+
+  sub-header{
+    display: none;
+  }
+
+  }
+
 }
