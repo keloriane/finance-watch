@@ -1,15 +1,14 @@
-import "../css/style.css"
-
-// Our modules / classes
-import MobileMenu from "./modules/MobileMenu"
-import HeroSlider from "./modules/HeroSlider"
+const menu = document.getElementById("hamburger-menu");
+const menuHandle = document.getElementById('menu-handler');
+const menuDisplay = document.getElementById('menu-phone');
 
 
-// Instantiate a new object using our modules/classes
-var mobileMenu = new MobileMenu()
-var heroSlider = new HeroSlider()
+menuHandle.addEventListener("click" , function(){
+    menu.classList.remove("open");
 
-// Allow new JS and CSS to load in browser without a traditional page refresh
-if (module.hot) {
-  module.hot.accept()
-}
+})
+
+menuDisplay.addEventListener('click' , function() {
+    console.log("click");
+    menu.classList.add('open')
+})

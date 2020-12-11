@@ -32,9 +32,8 @@ get_header();
             <p>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
             </p>
-            <a href="#" class="contact-article">
-                <img src="" class="pdf" alt="">
-                <p>Contactez nous</p>
+            <a class="btn btn-arrow btn-border">
+                <span> <span class="arrow">></span>  Contactez nous<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
             </a>
             <div class="call-to-action download">
                 <p>
@@ -66,8 +65,8 @@ get_header();
                         vous voulez rejoindre la communauté des amis de la finance ?
                     </p>
                 </div>
-                <a href="" class="join">
-                    Rejoindre le groupe
+                <a class="btn btn-arrow btn-border">
+                    <span> <span class="arrow">></span>  Contactez nous<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
                 </a>
             </div>
             <div class="card l-col-5 d-col-5 ">
@@ -84,8 +83,8 @@ get_header();
                         vous voulez rejoindre la communauté des amis de la finance ?
                     </p>
                 </div>
-                <a href="" class="join">
-                    Rejoindre le groupe
+                <a class="btn btn-arrow btn-border">
+                    <span> <span class="arrow">></span>  Contactez nous<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
                 </a>
             </div>
             <div class="card l-col-5 d-col-5 ">
@@ -102,37 +101,52 @@ get_header();
                         vous voulez rejoindre la communauté des amis de la finance ?
                     </p>
                 </div>
-                <a href="" class="join">
-                    Rejoindre le groupe
+                <a class="btn btn-arrow btn-border">
+                    <span> <span class="arrow">></span>  Contactez nous<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
                 </a>
             </div>
 
         </div>
     </section>
     <section class="action-finance-watch">
-        <div class="section-title">
+        <div class="section-title center t-grid m-col-18 t-col-18 d-col-18">
             <h2>
                 PARTICIPER À L'ACTION DE FINANCE WATCH
             </h2>
 
         </div>
-        <div class="member-card">
-            <h3>
-                DEVENIR MEMBRE DE FINANCE WATCH
-            </h3>
-            <p>
-                Vous êtes expert en finance ou votre organisation lutte pour une société plus juste, verte et inclusive ? Rejoignez-nous !
-            </p>
+        <div class="card-container-action">
+            <div class="member-card l-col-8 d-col-8 t-grid-18  ">
+                <h3>
+                    DEVENIR MEMBRE DE FINANCE WATCH
+                </h3>
+                <p>
+                    Vous êtes expert en finance ou votre organisation lutte pour une société plus juste, verte et inclusive ? Rejoignez-nous !
+                </p>
+                <a href="">
+                    <img src="" alt="" class="icon">
+                    Devenir membre
+                </a>
+            </div>
+            <div class="line border"></div>
+            <div class="member-card donation-card l-col-8 d-col-8 t-grid-18  ">
+                <h3>
+                    NOUS SOUTENIR EN FAISANT UN DON
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                </p>
+
+                <a class="btn btn-arrow btn-border">
+                    <span>Hover me<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
+                </a>
+            </div>
+
         </div>
-        <div class="donation-card">
-            <h3>
-                NOUS SOUTENIR EN FAISANT UN DON
-            </h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-            </p>
 
         </div>
     </section>
 
 </main>
+
+<?php get_footer(); ?>

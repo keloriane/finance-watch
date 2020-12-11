@@ -11,11 +11,33 @@
 
       }
     }
+      .article-details {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 91%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top: 1px dashed #9AC7FE;
+        border-bottom: 1px dashed #9AC7FE ;
+        .article-info {
+          display: flex;
+          width: 15%;
+          justify-content: space-around;
+          .article-reply {
+            display: flex;
+            img {
+              margin-left: 10px;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
     }
     .article-body {
 
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap;
       margin: 0 auto;
       .article {
@@ -39,9 +61,14 @@
           color: #7A7FAC;
           line-height: 32px;
         }
+        h4 {
+          font-size: 18px;
+          font-family: "Roboto Mono Medium" , monospace;
+
+        }
         p{
           color: #666666;
-          line-height: 18px;
+          line-height: 24px;
           letter-spacing: 0.98px;
           font-size: 15px;
           font-family: "Rubik" , sans-serif;
@@ -57,9 +84,20 @@
         .author-container {
           display: flex;
           flex-direction: column;
+
+
+          border-top: 1px dashed #9AC7FE;
+          border-bottom: 0.5px dashed #9AC7FE ;
+          padding-bottom: 40px;
+          padding-top: 40px;
+
+          img {
+            width: 49%;
+            border-radius: 50%;
+          }
           .author-name {
             display: flex;
-            justify-content: space-evenly;
+
 
             width: 100%;
             p{
@@ -75,13 +113,21 @@
               font-family: "Roboto Mono" , monospace;
               color: #358FFE;
               font-size: 12px;
+
+              font-weight: 600;
+
             }
           }
         }
         .about-author {
           display: flex;
           flex-direction: column;
-          padding-bottom: 20px;
+
+          border-top: 0.5px dashed #9AC7FE;
+          border-bottom: 1px dashed #9AC7FE ;
+          padding-bottom: 40px;
+          padding-top: 40px;
+
 
           h3 {
             font-family: "Roboto Mono" , monospace;
@@ -97,7 +143,13 @@
 
         }
         .navigation-container {
+          border-top: 1px dashed #9AC7FE;
+          border-bottom: 0.5px dashed #9AC7FE ;
+          padding-bottom: 40px;
+          padding-top: 40px;
           .tagger {
+            margin-top: 30px;
+            margin-bottom: 30px;
             .tag-wrapper {
               display: flex;
               flex-wrap: wrap;
@@ -122,6 +174,44 @@
             }
           }
 
+        }
+        .facebook-action {
+          background-color: #358FFE;
+          color: white;
+          border-radius: 5px;
+          padding: 50px;
+
+          .card-facebook {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            .text-container {
+              h4 {
+                font-family: "Rubik SemiBold" , sans-serif;
+                font-size: 23px;
+                color: white;
+
+              }
+              p {
+                font-family: "Rubik Medium" , sans-serif;
+                font-size: 18px;
+                color: white;
+              }
+              }
+            }
+              a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 300px;
+                height: 50px;
+                color: #358FFE;
+                font-size: 14px;
+                font-family: "Rubik Medium" , sans-serif;
+                background-color: #fff;
+                padding-left: 20px;
+                padding-right: 20px;
+          }
         }
         p {
           color: #666666;
@@ -218,5 +308,31 @@
     }
 
     }
+  }
+}
+
+
+@media (max-width: 1024px){
+  .post-details {
+    .main-article{
+      .article-body {
+      .side-bar-info {
+        text-align: center;
+        .navigation-container {
+          .tagger {
+            .tag-wrapper {
+              justify-content: center;
+            }
+
+          }
+        }
+
+
+      }
+
+      }
+
+    }
+
   }
 }
