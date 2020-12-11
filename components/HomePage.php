@@ -39,7 +39,7 @@ class Homepage
         foreach ($articles as $articleItem) {
             $articleACF = get_field('custom_article', $articleItem->ID);
             $article = (object)$articleACF;
-            $render .= $this->getLastsArticlesItem($article);
+            $render .= $this->getLastsArticlesItem($article, $articleItem->ID);
         };
 
         echo $render;
@@ -51,7 +51,7 @@ class Homepage
         foreach ($articles as $articleItem) {
             $articleACF = get_field('custom_article', $articleItem->ID);
             $article = (object)$articleACF;
-            $render .= $this->getMostReadArticleItem($article);
+            $render .= $this->getMostReadArticleItem($article, $articleItem->ID);
         };
 
         echo $render;
@@ -72,34 +72,34 @@ class Homepage
 
         echo <<<HEREDOC
             <a href={$this->getTheLink($idMainHighLight)}>
-            <article class='main-highlight'>
-              <div class="main-highlight-bg"></div>
-              <div class='main-highlight-featured-image-wrapper'>
-                <img class='main-highlight-featured-image' src="{$mainHighlight->featured_image}" alt="">    
-              </div>
-              <div class="main-highlight-content">
-                <p class="main-highlight-top">
-                    <span class="date">{$mainHighlight->date}</span> 
+                <article class='main-highlight'>
+                  <div class="main-highlight-bg"></div>
+                  <div class='main-highlight-featured-image-wrapper'>
+                    <img class='main-highlight-featured-image' src="{$mainHighlight->featured_image}" alt="">    
+                  </div>
+                  <div class="main-highlight-content">
+                    <p class="main-highlight-top">
+                        <span class="date">{$mainHighlight->date}</span> 
+                        <span class="vertical-line">|</span>
+                        <span class="tags">{$displayTags}</span>
+                    </p>
+                    <div class="main-highlight-middle">
+                            <div class="main-highlight-middle-excerpt">{$mainHighlight->contenu}</div> 
+                   
+                    </div>
+                    <div class="main-highlight-bottom">
+                      <div class="main-highlight-bottom-item custom-article-comments">
+                        <img class="main-highlight-comment-icon" src="{$commentsImagePath}" alt="">
+                        <span class="main-highlight-comment-count">10</span>
+                    </div>
                     <span class="vertical-line">|</span>
-                    <span class="tags">{$displayTags}</span>
-                </p>
-                <div class="main-highlight-middle">
-                        <div class="main-highlight-middle-excerpt">{$mainHighlight->contenu}</div> 
-               
-                </div>
-                <div class="main-highlight-bottom">
-                  <div class="main-highlight-bottom-item custom-article-comments">
-                    <img class="main-highlight-comment-icon" src="{$commentsImagePath}" alt="">
-                    <span class="main-highlight-comment-count">10</span>
-                </div>
-                <span class="vertical-line">|</span>
-                <div class="main-highlight-bottom-item custom-article-author">
-                    <span class="by">Par</span>
-                    <span class="main-highlight-author">{$auteur->user_nicename}</span>
-                </div>
-              </div>
-              </div>        
-            </article>
+                    <div class="main-highlight-bottom-item custom-article-author">
+                        <span class="by">Par</span>
+                        <span class="main-highlight-author">{$auteur->user_nicename}</span>
+                    </div>
+                  </div>
+                  </div>        
+                </article>
             </a>
         HEREDOC;
     }
@@ -112,38 +112,38 @@ class Homepage
         $displayTags = $this->renderTags($tags);
 
         return <<<HEREDOC
-         <article class='highlight'>
-           <a href={$this->getTheLink($id)}>
-          <div class='highlight-featured-image-wrapper'>
-            <img class='highlight-featured-image' src="{$highlight->featured_image}" alt="">    
-          </div>
-          <div class="highlight-content">
-             <div class="highlight-top">
-                <span class="date">{$highlight->date}</span> 
-                <span class="vertical-line">|</span>
-                <span class="tags">{$displayTags}</span>
+         <a href={$this->getTheLink($id)}>
+             <article class='highlight'>
+              <div class='highlight-featured-image-wrapper'>
+                <img class='highlight-featured-image' src="{$highlight->featured_image}" alt="">    
               </div>
-              <div class="highlight-middle">
-                <div class="highlight-middle-excerpt">{$highlight->contenu}</div>
-              </div>
-              <div class="highlight-bottom">
-                  <div class="highlight-bottom-item custom-article-comments">
-                    <img class="highlight-comment-icon" src="{$commentsImagePath}" alt="">
-                    <span class="highlight-comment-count">10</span>
+              <div class="highlight-content">
+                 <div class="highlight-top">
+                    <span class="date">{$highlight->date}</span> 
+                    <span class="vertical-line">|</span>
+                    <span class="tags">{$displayTags}</span>
                   </div>
-                  <span class="vertical-line">|</span>
-                  <div class="highlight-bottom-item custom-article-author">
-                    <span class="by">Par</span>
-                    <span class="highlight-author">{$auteur->user_nicename}</span>
+                  <div class="highlight-middle">
+                    <div class="highlight-middle-excerpt">{$highlight->contenu}</div>
+                  </div>
+                  <div class="highlight-bottom">
+                      <div class="highlight-bottom-item custom-article-comments">
+                        <img class="highlight-comment-icon" src="{$commentsImagePath}" alt="">
+                        <span class="highlight-comment-count">10</span>
+                      </div>
+                      <span class="vertical-line">|</span>
+                      <div class="highlight-bottom-item custom-article-author">
+                        <span class="by">Par</span>
+                        <span class="highlight-author">{$auteur->user_nicename}</span>
+                      </div>
                   </div>
               </div>
-          </div>
-          </a>
-         </article>
+             </article>
+         </a>
          HEREDOC;
     }
 
-    function getLastsArticlesItem($article)
+    function getLastsArticlesItem($article,$id)
     {
         $tags = $article->tags;
         $auteur = (object)$article->auteur;
@@ -151,56 +151,60 @@ class Homepage
         $displayTags = $this->renderTags($tags);
 
         return <<<HEREDOC
-         <article class='last-article-item'>
-          <div class='last-article-item-featured-image-wrapper'>
-            <img class='last-article-item-featured-image' src="{$article->featured_image}" alt="">    
-          </div>
-          <div class="last-article-item-content">
-             <div class="last-article-item-top">
-                <span class="date">{$article->date}</span> 
-                <span class="vertical-line">|</span>
-                <span class="tags">{$displayTags}</span>
+         <a href={$this->getTheLink($id)}>
+             <article class='last-article-item'>
+              <div class='last-article-item-featured-image-wrapper'>
+                <img class='last-article-item-featured-image' src="{$article->featured_image}" alt="">    
               </div>
-              <div class="last-article-item-middle">
-                <div class="last-article-item-middle-excerpt">{$article->contenu}</div>
-              </div>
-              <div class="last-article-item-bottom">
-                  <div class="last-article-item-bottom-item custom-article-comments">
-                    <img class="last-article-item-comment-icon" src="{$commentsImagePath}" alt="">
-                    <span class="last-article-item-comment-count">10</span>
+              <div class="last-article-item-content">
+                 <div class="last-article-item-top">
+                    <span class="date">{$article->date}</span> 
+                    <span class="vertical-line">|</span>
+                    <span class="tags">{$displayTags}</span>
                   </div>
-                  <span class="vertical-line">|</span>
-                  <div class="last-article-item-bottom-item custom-article-author">
-                    <span class="by">Par</span>
-                    <span class="last-article-item-author">{$auteur->user_nicename}</span>
+                  <div class="last-article-item-middle">
+                    <div class="last-article-item-middle-excerpt">{$article->contenu}</div>
+                  </div>
+                  <div class="last-article-item-bottom">
+                      <div class="last-article-item-bottom-item custom-article-comments">
+                        <img class="last-article-item-comment-icon" src="{$commentsImagePath}" alt="">
+                        <span class="last-article-item-comment-count">10</span>
+                      </div>
+                      <span class="vertical-line">|</span>
+                      <div class="last-article-item-bottom-item custom-article-author">
+                        <span class="by">Par</span>
+                        <span class="last-article-item-author">{$auteur->user_nicename}</span>
+                      </div>
                   </div>
               </div>
-          </div>
-         </article>
+             </article>
+         </a>
          HEREDOC;
     }
 
-    function getMostReadArticleItem($article)
+    function getMostReadArticleItem($article,$id)
     {
         $tags = $article->tags;
         $displayTags = $this->renderTags($tags);
 
         return <<<HEREDOC
-         <article class='most-read-article-item'>
-          <div class='most-read-article-item-featured-image-wrapper'>
-            <img class='most-read-article-item-featured-image' src="{$article->featured_image}" alt="">    
-          </div>
-          <div class="most-read-article-item-content">
-             <div class="most-read-article-item-top">
-                <span class="date">{$article->date}</span> 
-                <span class="vertical-line">|</span>
-                <span class="tags">{$displayTags}</span>
+         <a href={$this->getTheLink($id)}>
+             <article class='most-read-article-item'>
+              <div class='most-read-article-item-featured-image-wrapper'>
+                <img class='most-read-article-item-featured-image' src="{$article->featured_image}" alt="">    
               </div>
-              <div class="most-read-article-item-bottom">
-                <div class="last-article-item-middle-excerpt">{$article->contenu}</div>
+              <div class="most-read-article-item-content">
+                 <div class="most-read-article-item-top">
+                    <span class="date">{$article->date}</span> 
+                    <span class="vertical-line">|</span>
+                    <span class="tags">{$displayTags}</span>
+                  </div>
+                  <div class="most-read-article-item-bottom">
+                    <div class="last-article-item-middle-excerpt">{$article->contenu}</div>
+                  </div>
               </div>
-          </div>
-         </article>
+             </article>
+         </a>
          HEREDOC;
     }
 }

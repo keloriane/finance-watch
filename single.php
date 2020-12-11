@@ -33,17 +33,15 @@ $postACF = $post->get(get_the_ID());
             </div>
             <div class="side-bar-info l-col-10 d-col-5 t-col-19 t-grid m-grid">
                 <div class="author-container">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/author.png" alt="">
+                    <div>
+                        <?= $postACF->auteur['user_avatar'] ?>
+                    </div>
                     <p>
                         Author
                     </p>
                     <div class="author-name">
-                        <p>
-                            Christian
-                        </p>
-                        <p>
-                            Stiefmuelle
-                        </p>
+                        <p><?= $postACF->auteur['user_firstname'] ?></p>
+                        <p><?= $postACF->auteur['user_lastname'] ?></p>
                     </div>
                     <div class="membre">
                         <p>Membre finance watch</p>
@@ -52,15 +50,7 @@ $postACF = $post->get(get_the_ID());
                 </div>
                 <div class="about-author">
                     <h3>A propos de l'auteur</h3>
-                    <p>
-                        Sandy Winkler Madar a commencé sa carrière comme travailleuse de rue, essayant d'aider les
-                        criminels actuels et futurs à avoir une vie meilleure.
-                        Elle a fondé Din Retshjaelp (l'aide juridique sociale) et est toujours la directrice générale de
-                        cette organisation depuis lors. Elle travaille à la modification des lois et de la législation.
-                        En novembre 2018, Sandy Madar est devenue présidente du Réseau européen des dettes des
-                        consommateurs (ECDN).
-
-                    </p>
+                    <p><?= $postACF->auteur['user_description'] ?></p>
 
                 </div>
                 <div class="auhor-photos">
