@@ -926,39 +926,3 @@ textarea {
         font-size: 15px;
         font-weight: 300;
         color: #666666; }
-
-.wrapper {
-  display: flex; }
-
-.main-highlight-middle {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden; }
-
-.highlight {
-  background: white;
-  position: relative;
-  min-width: 276px;
-  width: 276px;
-  margin-right: 50px; }
-
-.highlight-middle {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden; }
-
-.highlight-middle-excerpt p {
-  color: #4D5491; }
-
-.highlight-featured-image-wrapper {
-  height: 142px;
-  overflow: hidden; }
-
-.highlight-featured-image {
-  width: 100%; }
-
-.highlight-bottom {
-  display: flex;
-  flex-direction: row; }

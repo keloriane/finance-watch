@@ -1,45 +1,24 @@
 <?php
-class Post {
-    function debug(){
-      if($this->posts[0]){
-        var_dump($this->posts[0]);
-      }
-    }
 
-    function debugAll(){
-        var_dump($this->posts);
-    }
-
-    function all() {
-      foreach ($this->posts as $post) {
-        echo $this->postItemList($post);
-      }  
-    }
-
-    function single() {
-      foreach ($this->posts as $post) {
-        echo $this->postItemSingle($post);
-      }  
-    }
-
-    function permalink($post)
+class Post
+{
+    function renderTags($tags)
     {
-      return esc_url( apply_filters( 'the_permalink', get_permalink($post), $post ) );
+        $tagsList = [];
+        foreach ($tags as $tag) {
+            $tagsList[] = "<span>{$tag->name}</span> ";
+        }
+        return implode('', $tagsList);
     }
 
-    function postItemList($current){
-      return <<<EOT
-        <h1 class='test'><a href="{$this->permalink($current)}">$current->post_title</a></h1>
-        <p>$current->post_content</p>
-        <hr>
-      EOT;
+    function getTheLink($postId)
+    {
+        return get_permalink($postId);
     }
 
-    function postItemSingle($current){
-      return <<<EOT
-        <h1 class='test'>$current->post_title</h1>
-        <p>$current->post_content</p>
-      EOT;
+    function get($postId)
+    {
+        return (object) get_field('custom_article', $postId);
     }
-  }
-?>
+
+}
