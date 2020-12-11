@@ -11,10 +11,10 @@
             </div>
         </header>
         <div class="about-blog-wrapper d-grid l-col-24 t-col-24 m-grid d-col-24">
-            <div class="image-blog l-col-12 t-col-21 m-col-21 d-col-10">
+            <div class="image-blog l-col-12 t-col-16 m-col-21 d-col-10">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/team.jpg" alt="">
             </div>
-            <div class="text-blog d-col-10 l-col-10 t-col-21 m-col-21 center">
+            <div class="text-blog d-col-10 l-col-10 t-col-16 m-col-21 center">
                 <h3>
                     <?php the_field('header_titre') ?>
                 </h3>
@@ -41,11 +41,11 @@
                 </a>
             </div>
         </div>
-        <div class="vision-container">
+        <div class="vision-container d-grid l-col-24 t-col-24 m-grid d-col-24">
             <div class="subtitle">
 
             </div>
-            <div class="list-container col-13 t-col-19 center">
+            <div class="list-container  t-col-16 center">
                 <ul>
                     <li>
                         <span class="bold">Assurer la stabilité ﬁnancière :</span> Alors que de nouvelles menaces
@@ -82,7 +82,7 @@
             <div class="image-svg-wrapper col-12 t-col-11">
                 <img src="<?php the_field("image_people"); ?>" alt="">
             </div>
-            <div class="member-wrapper-description">
+            <div class="member-wrapper-description d-grid l-col-21 t-col-16 m-grid d-col-24">
                 <div class="title-container col-13 t-col-19">
                     <h2 class="title-regular">
                         <?php the_field("titre_membre") ?>
@@ -91,17 +91,17 @@
                 <div class="text-wrapper col-13 t-col-19">
                     <div class="subtitle-regular">
                         <p>
-                           <?php the_field('sous_titre_membres') ?>
+                            <?php the_field('sous_titre_membres') ?>
                         </p>
                     </div>
                     <div class="text-wrapper">
                         <p>
-                           <?php the_field('membres_text') ?>
+                            <?php the_field('membres_text') ?>
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="grid-members col-19 t-grid center">
+            <div class="grid-members d-grid l-col-21 t-col-16 m-grid d-col-24">
                 <div class="title-container">
                     <h2 class="title-regular">
                         <?php the_field('titre_organisation') ?>
@@ -111,18 +111,18 @@
                     <ul class="members">
                         <?php
 
-// Check rows exists.
-if( have_rows('organisation_membre') ):
+                        // Check rows exists.
+                        if (have_rows('organisation_membre')):
 
-    // Loop through rows.
-    while( have_rows('organisation_membre') ) : the_row();
+                            // Loop through rows.
+                            while (have_rows('organisation_membre')) : the_row();
 
-        $photo = get_sub_field('logo_entreprise');
-        $pays = get_sub_field('pays_organisation');
-        $description = get_sub_field('nom_organisation');
+                                $photo = get_sub_field('logo_entreprise');
+                                $pays = get_sub_field('pays_organisation');
+                                $description = get_sub_field('nom_organisation');
 
-        // Do something...
-        echo <<<EOT
+                                // Do something...
+                                echo <<<EOT
        <li class="col-4 t-col-7">
                             <a href="#">
                                 <div class="card-container">
@@ -141,20 +141,20 @@ if( have_rows('organisation_membre') ):
 
 EOT;
 
-    // End loop.
-    endwhile;
+                                // End loop.
+                            endwhile;
 
 // No value.
-else :
-    // Do something...
-endif;
-?>
+                        else :
+                            // Do something...
+                        endif;
+                        ?>
 
                     </ul>
                 </div>
 
             </div>
-            <div class="grid-members col-19 t-grid center">
+            <div class="grid-members d-grid l-col-21 t-col-16 m-grid d-col-24">
                 <div class="title-container">
                     <h2 class="title-regular">
                         MEMBRES INDIVIDUELS
@@ -177,9 +177,8 @@ endif;
                             $description = get_sub_field('description_membre');
 
 
-
-                           echo <<<HEREDOC
-                        <div class="member-card t-grid d-col-9">
+                            echo <<<HEREDOC
+                        <div class="member-card t-grid d-col-9 l-col-8">
                             <div class="member-picture">
                                 <img src="$photo[url]" alt="">
                             </div>
@@ -209,15 +208,18 @@ HEREDOC;
 
         <section class="country-section">
             <div class="overlay-card l-col-18 d-col-18 t-col-13 m-grid">
-                <h3 class="card-title">
-                    Devenir membre
-                </h3>
-                <p>
-                    Nous élaborons nos positions et notre plan de travail avec nos membres. Rejoignez-nous
-                </p>
-                <button>
-                    Devenir membre
-                </button>
+                <div class="inner-card">
+                    <h3 class="card-title">
+                        Devenir membre
+                    </h3>
+                    <p>
+                        Nous élaborons nos positions et notre plan de travail avec nos membres. Rejoignez-nous
+                    </p>
+                    <button>
+                        Devenir membre
+                    </button>
+
+                </div>
 
             </div>
             <div class="text-network">
