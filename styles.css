@@ -1412,10 +1412,8 @@ textarea {
 /*MAIN-HIGHLIGHT*/
 .main-highlight {
   height: 400px;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; }
+  width: 500px;
+  background: rgba(0, 0, 0, 0.1); }
 
 .main-highlight-wrapper {
   position: relative;
@@ -1430,7 +1428,11 @@ textarea {
   z-index: -1; }
 
 .main-highlight-content {
-  padding: 20px; }
+  padding: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 4; }
 
 .main-highlight-top {
   text-transform: uppercase;
@@ -1453,11 +1455,6 @@ textarea {
   -webkit-box-orient: vertical;
   overflow: hidden; }
 
-.main-highlight-middle-excerpt p {
-  color: white;
-  font-size: 29.68px;
-  font-family: Rubik; }
-
 .main-highlight-featured-image-wrapper {
   overflow: hidden;
   position: absolute;
@@ -1467,8 +1464,9 @@ textarea {
 
 .main-highlight-featured-image {
   width: 100%;
-  height: 410px;
-  object-fit: cover; }
+  height: 100%;
+  object-fit: cover;
+  min-height: 450px; }
 
 .main-highlight-bottom {
   display: flex;
@@ -1800,7 +1798,9 @@ textarea {
 .pinned-article-item-featured-image {
   height: 100%;
   width: 100%;
-  object-fit: cover; }
+  object-fit: cover;
+  min-height: 200px;
+  max-height: 200px; }
 
 .pinned-article-item-content {
   padding-top: 20px;
@@ -1868,6 +1868,11 @@ textarea {
   .pinned-article-item-bottom .pinned-article-item-author {
     color: #7A7FAC;
     text-transform: capitalize; }
+
+.pinned-article-container .swiper-container {
+  max-width: 1150px;
+  width: 100%;
+  height: 100%; }
 
 header {
   display: flex;

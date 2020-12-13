@@ -22,15 +22,23 @@ menuDisplay.addEventListener('click' , function() {
 })
 
 
-const swiper =  new Swiper('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
+const swiper = new Swiper('.swiper-container', {
     loop: true,
-
-    // If we need pagination
+    direction: 'horizontal',
+    slidesPerView: 1,
     pagination: {
         el: '.swiper-pagination',
-        dynamicBullets: true,
+        clickable: true,
+    },
+    breakpoints: {
+        600: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        767: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        }
     }
 })
 searchBtn.addEventListener("click" , function ( ) {
@@ -38,4 +46,4 @@ searchBtn.addEventListener("click" , function ( ) {
     inputSearch.style.visibility = "visible"
     searchInput.style.visibility = "visible"
     gsap.from(inputSearch, .3 , { width:0 })
-})
+});
