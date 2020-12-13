@@ -44,7 +44,7 @@ $tags = get_tags();
 
 
 ?>
-    <div class="main-content">
+    <div class="main-content search-result">
         <div class="main-content-wrapper d-grid l-grid t-grid m-grid">
             <h2>Resultat de recherche</h2>
             <div class="main-content-columns">
@@ -73,29 +73,31 @@ $tags = get_tags();
                             </div>
                         </div>
                     </div>
-                    <div class="bubble-facebook">
-                        <img class="bubble-facebook-image" src=<?= get_theme_file_uri('/images/french-map.png'); ?> alt="">
-                        <div class="bubble-facebook-text">
-                            <h4 class="bubble-facebook-text-title">Hey !</h4>
-                            <p class="bubble-facebook-text-content">vous voulez rejoindre la communauté des amis de Finance
-                                Watch</p>
+                    <div class="facebook-action">
+                        <div class="card-facebook">
+                            <div class="svg-container">
+                                <img src="<?php echo get_template_directory_uri() ?>/images/planet.svg" alt="">
+                            </div>
+                            <div class="text-container">
+                                <div class="subtitle">
+                                    <h4>
+                                        HEY !
+                                    </h4>
+                                    <p>
+                                        vous voulez rejoindre la communauté des amis de la finance
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bubble-facebook-button"></div>
+                        <a href="" class="facebook-button">
+                            <img src="<?php echo get_template_directory_uri()?>/images/f-thumb.svg" alt="">
+                            rejoindre le group
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div>
-            <div class="pinned-article-container">
-                <div class="swiper-container">
-                    <!--                <h3 class="pinned-article-container-title">ARTICLES "EPINGLES"</h3>-->
-                    <div class="pinned-article-wrapper d-grid l-grid t-grid m-grid">
-                        <?php $home->pinnedArticles($mostReadPosts); ?>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </div>
+
 
     </div>
 

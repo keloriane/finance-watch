@@ -55,16 +55,6 @@
                     <input aria-label="search" type="search" name="search_text" class="search-text" placeholder="Search..." autocomplete="on">
                 </form>
 
-                <button class="menu-call-to-action" id="menu-phone">
-                    menu 	&#x2630;
-                </button>
-                <button class="participate">
-                    Participer
-                </button>
-                <button class="call-to-finance">
-                    Vers Finance-Watch.org
-                </button>
-
 
             </div>
 

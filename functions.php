@@ -7,9 +7,22 @@ CustomTheme::addStyle('grid',get_theme_file_uri('styles.css'));
 CustomTheme::addStyle('Custom-google-fonts','https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
 CustomTheme::addStyle('swiper-css','https://unpkg.com/swiper/swiper-bundle.min.css');
 CustomTheme::addStyle('font-awesome','https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-CustomTheme::addSupport("menus" , "header" , "menu-header");
+
 CustomTheme::addScript('swiper-js','https://unpkg.com/swiper/swiper-bundle.min.js', NULL, '1.0', true);
 CustomTheme::addScript('custom-script',get_theme_file_uri('/js/scripts.js'), NULL, '1.0', true);
+
+
+
+function register_my_menus() {
+    register_nav_menus(
+        array(
+            'header-menu' => __( 'Header Menu' ),
+            'extra-menu' => __( 'Extra Menu' )
+        )
+    );
+}
+add_action( 'init', 'register_my_menus' );
+
 
 add_action( 'init', 'sennza_register_cpt_member' );
 

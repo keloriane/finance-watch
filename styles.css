@@ -290,12 +290,16 @@ a {
   font-size: 17px;
   font-family: 'Roboto Mono', monospace; }
 
+.member-arrow {
+  width: 240px !important; }
+  .member-arrow span {
+    padding-right: 0 !important; }
+
 .btn,
 button {
   margin: 0 auto;
   color: white;
   height: 50px;
-  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,7 +313,7 @@ button {
   border: 2px solid #358FFE;
   transition: color 0.1s cubic-bezier(0.16, 0.08, 0.355, 1), background 0.1s cubic-bezier(0.16, 0.08, 0.355, 1);
   cursor: pointer;
-  max-width: 200px;
+  width: inherit;
   outline: none;
   vertical-align: middle;
   text-align: center;
@@ -343,7 +347,6 @@ button {
   position: relative;
   transition: background-color 300ms ease-out; }
   .btn-arrow span {
-    display: inline-block;
     position: relative;
     transition: all 300ms ease-out;
     will-change: transform;
@@ -396,6 +399,24 @@ button {
   position: relative;
   font-size: 13px;
   font-family: "Rubik" , sans-serif; }
+
+.btn-a-propos {
+  width: 200px; }
+
+.search-result {
+  margin-bottom: 100px; }
+
+.call-to-action-download {
+  color: #358FFE;
+  font-family: "Roboto Mono" , monospace;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.bp-button {
+  margin-left: 0 !important;
+  margin-top: 20px;
+  margin-bottom: 20px; }
 
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------ */
@@ -1269,7 +1290,8 @@ textarea {
   .blog-partage .header-article .text-article {
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    margin: 0 auto; }
     .blog-partage .header-article .text-article h3 {
       font-family: "Roboto Mono" , monospace;
       font-size: 18px;
@@ -1295,7 +1317,7 @@ textarea {
       text-align: center; }
   .debat .card-container {
     display: flex;
-    margin: 0 auto;
+    margin: 100px auto;
     justify-content: space-between;
     flex-wrap: wrap; }
     .debat .card-container .card {
@@ -1308,7 +1330,8 @@ textarea {
       padding-left: 30px;
       padding-right: 30px;
       height: 300px;
-      position: relative; }
+      position: relative;
+      padding-bottom: 20px; }
       .debat .card-container .card img {
         position: absolute;
         top: -14%;
@@ -1569,9 +1592,26 @@ textarea {
     text-transform: capitalize; }
 
 /*LAST-ARTICLES*/
+.main-content {
+  margin-top: 135px; }
+
+.pinned-tags-title {
+  font-family: "Rubik" , sans-serif;
+  font-size: 18px;
+  color: #0A246A; }
+
+.most-used-tags-title {
+  font-family: "Rubik" , sans-serif;
+  font-size: 18px;
+  color: #0A246A; }
+
 .main-content-wrapper {
   max-width: 1150px;
   margin: 0 auto; }
+  .main-content-wrapper h2 {
+    font-family: "Roboto Mono" , monospace;
+    font-size: 12px;
+    text-transform: uppercase; }
 
 .main-content-columns {
   display: flex;
@@ -1625,7 +1665,10 @@ textarea {
   font-size: 10px;
   margin-bottom: 16px; }
   .last-article-item-top .last-article-item-top-date {
-    color: #9B9FC1; }
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    color: #666666;
+    font-weight: 500; }
   .last-article-item-top .last-article-item-top-vertical-line {
     height: 100%;
     width: 5px;
@@ -1634,6 +1677,11 @@ textarea {
   .last-article-item-top .last-article-item-top-tags {
     color: #9EC9FE;
     text-transform: uppercase; }
+    .last-article-item-top .last-article-item-top-tags span {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 12px;
+      color: #2196F3;
+      font-weight: 500; }
 
 .last-article-item-middle {
   display: -webkit-box;
@@ -1651,13 +1699,20 @@ textarea {
       max-width: 350px; } }
 
 .last-article-item-middle-title {
-  font-family: Rubik;
+  font-family: 'Rubik' , sans-serif;
+  font-weight: 800;
   font-size: 18px;
   line-height: 1.4;
-  margin-bottom: 16px; }
-
-.last-article-item-middle-excerpt p {
+  margin-bottom: 16px;
   color: #4D5491; }
+
+.last-article-item-middle-excerpt {
+  color: #4D5491; }
+  .last-article-item-middle-excerpt a .main-post-header p {
+    font-family: "Rubik" , sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #4D5491; }
 
 .last-article-item-bottom {
   display: flex;
@@ -1718,9 +1773,15 @@ textarea {
     width: 5px;
     margin-left: 4px;
     margin-right: 8px; }
-  .most-read-article-item-top .tags {
-    color: #9EC9FE;
-    text-transform: uppercase; }
+  .most-read-article-item-top .most-read-article-item-top-date {
+    font-family: "Roboto Mono" , monospace;
+    font-size: 10px;
+    color: #666666; }
+  .most-read-article-item-top .most-read-article-item-top-tags {
+    color: #358FFE;
+    text-transform: uppercase;
+    font-family: "Roboto Mono" , monospace;
+    font-size: 10px; }
 
 .most-read-article-item-bottom {
   display: -webkit-box;
@@ -1873,6 +1934,114 @@ textarea {
   max-width: 1150px;
   width: 100%;
   height: 100%; }
+
+.facebook-action {
+  background-color: #358FFE;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+  .facebook-action .card-facebook {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+    .facebook-action .card-facebook .text-container h4 {
+      font-family: "Rubik SemiBold" , sans-serif;
+      font-size: 23px;
+      color: white; }
+    .facebook-action .card-facebook .text-container p {
+      font-family: "Rubik Medium" , sans-serif;
+      font-size: 18px;
+      color: white; }
+  .facebook-action a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    height: 50px;
+    color: #358FFE;
+    font-size: 14px;
+    font-family: "Rubik Medium" , sans-serif;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 200px; }
+
+.side-card {
+  margin-bottom: 20px; }
+
+.member-testimonials-container {
+  display: flex; }
+  .member-testimonials-container .swiper-testimonials {
+    max-width: 1150px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto; }
+  .member-testimonials-container .members {
+    display: flex; }
+
+.learn-more-wrapper {
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: "Roboto Mono" , monospace;
+  font-size: 14px;
+  color: #7A7FAC; }
+  .learn-more-wrapper a {
+    margin-top: 50px; }
+
+.pinned-article-item-top-tags span {
+  font-family: "Roboto Mono" , monospace;
+  font-size: 12px;
+  color: #358FFE; }
+
+.pinned-article-item-top-date {
+  font-family: "Roboto Mono" , monospace;
+  font-size: 12px;
+  color: #666666; }
+
+.pinned-article-item-middle-title {
+  font-family: "Rubik" , sans-serif;
+  font-size: 18px;
+  color: #4D5491;
+  font-weight: 800; }
+
+.swiper-testimonials img {
+  width: 100%;
+  max-width: 600px; }
+
+.swiper-testimonials .members-testimonial {
+  font-family: "Roboto Mono Light" , monospace;
+  font-size: 23px;
+  font-weight: 100;
+  color: #7A7FAC; }
+
+.members-content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: column;
+  margin-left: 30px; }
+  .members-content h3 {
+    font-family: "Rubik" , sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: #0A246A;
+    margin-bottom: 15px; }
+  .members-content .members-title {
+    font-family: "Rubik" , sans-serif;
+    font-weight: 800;
+    color: #666666; }
+
+.members {
+  flex-wrap: wrap; }
+
+.member-testimonials-container {
+  margin-top: 150px; }
 
 header {
   display: flex;
@@ -2095,7 +2264,7 @@ input.search-text {
 
 input.search-text:focus {
   z-index: 3;
-  width: 270px;
+  width: 600px;
   border: 1px solid #666;
   background-color: white;
   outline: none;
@@ -2155,7 +2324,6 @@ input.search-text::-webkit-search-cancel-button {
   background-color: #0A246A;
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
   padding-top: 50px;
   align-items: center; }
   .main-footer h3 {
@@ -2198,6 +2366,10 @@ input.search-text::-webkit-search-cancel-button {
           display: flex;
           flex-flow: column;
           justify-content: space-evenly; }
+          .main-footer .upper-footer .grid-footer .menu-nav .menu-footer div ul li a {
+            color: white;
+            font-family: "Roboto Mono" , monospace;
+            font-size: 13px; }
           .main-footer .upper-footer .grid-footer .menu-nav .menu-footer .nav-bar ul li a {
             font-family: "Roboto Mono" , monospace;
             font-size: 13px;

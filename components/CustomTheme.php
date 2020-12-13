@@ -40,10 +40,7 @@ class CustomTheme {
       return $asset;
     }
 
-    public static  function addSupport($args , $id , $description){
-        add_theme_support($args);
-        register_nav_menu( $id , $description );
-    }
+
 
     public static function addAssets($asset){
       self::$assets[] = $asset;

@@ -176,17 +176,13 @@ $mostReadPosts = get_posts(array(
 
     </article>
 
-    <div class="associate-article d-col-21 l-col-21" >
-        <div>
-            <div class="pinned-article-container">
-                <div class="swiper-container">
-                    <!--                <h3 class="pinned-article-container-title">ARTICLES "EPINGLES"</h3>-->
-                    <div class="pinned-article-wrapper d-grid l-grid t-grid m-grid">
-                        <?php $home->pinnedArticles($mostReadPosts); ?>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
+    <div class="pinned-article-container">
+        <div class="swiper-container">
+            <h3 class="pinned-article-container-title">ARTICLES "EPINGLES"</h3>
+            <div class="swiper-wrapper pinned-article-wrapper d-grid l-grid t-grid m-grid">
+                <?php $home->pinnedArticles($mostReadPosts); ?>
             </div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 </main>

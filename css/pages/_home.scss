@@ -36,7 +36,7 @@ $breakpoint-l: 1340px;
 .main-highlight {
   height: 400px;
   width: 500px;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .main-highlight-wrapper {
@@ -250,11 +250,27 @@ $breakpoint-l: 1340px;
 /*LAST-ARTICLES*/
 
 .main-content {
+  margin-top: 135px;
+}
+.pinned-tags-title {
+  font-family: "Rubik" , sans-serif;
+  font-size: 18px;
+  color: #0A246A;
+}
+.most-used-tags-title {
+  font-family: "Rubik" , sans-serif;
+  font-size: 18px;
+  color: #0A246A;
 }
 
 .main-content-wrapper {
   max-width: 1150px;
   margin: 0 auto;
+  h2 {
+    font-family: "Roboto Mono" , monospace ;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
 }
 
 .main-content-columns {
@@ -323,8 +339,15 @@ $breakpoint-l: 1340px;
   margin-bottom: 16px;
 
   .last-article-item-top-date {
-    color: #9B9FC1;
+
+
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    color: #666666;
+    font-weight: 500;
+
   }
+
 
   .last-article-item-top-vertical-line {
     height: 100%;
@@ -336,6 +359,13 @@ $breakpoint-l: 1340px;
   .last-article-item-top-tags {
     color: #9EC9FE;
     text-transform: uppercase;
+
+    span {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 12px;
+      color: #2196F3;
+      font-weight: 500;
+    }
   }
 }
 
@@ -356,13 +386,27 @@ $breakpoint-l: 1340px;
 }
 
 .last-article-item-middle-title {
-  font-family: Rubik;
+  font-family: 'Rubik' , sans-serif;
+  font-weight: 800;
   font-size: 18px;
   line-height: 1.4;
   margin-bottom: 16px;
+  color: #4D5491;
+
 }
 
-.last-article-item-middle-excerpt p {
+.last-article-item-middle-excerpt  {
+  a {
+    .main-post-header {
+       p{
+         font-family: "Rubik" , sans-serif;
+         font-size: 13px;
+         font-weight: 500;
+         color: #4D5491;
+       }
+    }
+  }
+
   color: #4D5491;
 }
 
@@ -445,11 +489,21 @@ $breakpoint-l: 1340px;
     margin-left: 4px;
     margin-right: 8px;
   }
-
-  .tags {
-    color: #9EC9FE;
-    text-transform: uppercase;
+  .most-read-article-item-top-date {
+    font-family:"Roboto Mono" , monospace ;
+    font-size: 10px;
+    color: #666666;
   }
+
+  .most-read-article-item-top-tags {
+
+    color: #358FFE;
+    text-transform: uppercase;
+    font-family: "Roboto Mono" , monospace;
+    font-size: 10px;
+  }
+
+
 }
 
 .most-read-article-item-bottom {
@@ -655,4 +709,143 @@ $breakpoint-l: 1340px;
   max-width: 1150px;
   width: 100%;
   height: 100%;
+}
+.facebook-action {
+  background-color: #358FFE;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .card-facebook {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .text-container {
+      h4 {
+        font-family: "Rubik SemiBold" , sans-serif;
+        font-size: 23px;
+        color: white;
+
+      }
+      p {
+        font-family: "Rubik Medium" , sans-serif;
+        font-size: 18px;
+        color: white;
+      }
+    }
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    height: 50px;
+    color: #358FFE;
+    font-size: 14px;
+    font-family: "Rubik Medium" , sans-serif;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 200px;
+  }
+}
+
+.side-card {
+  margin-bottom: 20px;
+
+}
+
+
+.member-testimonials-container {
+  display: flex;
+  .swiper-testimonials {
+    max-width: 1150px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+
+  }
+  .members {
+    display: flex;
+  }
+}
+
+.learn-more-wrapper {
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: "Roboto Mono" , monospace;
+  font-size: 14px;
+  color: #7A7FAC;
+  a {
+    margin-top: 50px;
+  }
+}
+
+.pinned-article-item-top-tags {
+  span {
+    font-family: "Roboto Mono" , monospace;
+    font-size: 12px;
+    color: #358FFE;
+  }
+}
+
+.pinned-article-item-top-date {
+  font-family: "Roboto Mono" , monospace;
+  font-size: 12px;
+  color: #666666;
+}
+.pinned-article-item-middle-title {
+  font-family: "Rubik" , sans-serif;
+  font-size: 18px;
+  color: #4D5491;
+  font-weight: 800;
+}
+
+.swiper-testimonials {
+
+  img {
+    width: 100%;
+    max-width: 600px;
+  }
+.members-testimonial{
+  font-family: "Roboto Mono Light" , monospace;
+  font-size: 23px;
+  font-weight: 100;
+  color: #7A7FAC;
+
+}
+}
+.members-content {
+  display: flex;
+
+  justify-content: space-evenly;
+  flex-flow: column;
+  margin-left: 30px;
+  h3 {
+    font-family: "Rubik" , sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: #0A246A;
+    margin-bottom: 15px;
+  }
+.members-title {
+  font-family: "Rubik" , sans-serif;
+  font-weight: 800;
+  color: #666666;
+}
+}
+
+.members {
+  flex-wrap: wrap;
+}
+
+.member-testimonials-container {
+  margin-top: 150px;
 }

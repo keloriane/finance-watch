@@ -58,11 +58,11 @@ $members = $membersQuery->posts;
                 </div>
             </div>
             <div class="homepage-sidebar-wrapper d-col-7 l-col-7 t-col-24">
-                <div class="most-read-articles-list">
+                <div class="side-card most-read-articles-list">
                     <h2 class="most-read-articles-list-title">ARTICLES LES PLUS LUS</h2>
                     <?php $home->mostReadArticles($mostReadPosts); ?>
                 </div>
-                <div class="homepage-sidebar-tags">
+                <div class=" side-card homepage-sidebar-tags">
                     <h2 class="most-read-articles-list-title">NAVIGATION</h2>
                     <div class="pinned-tags">
                         <h3 class="pinned-tags-title">Tags épingles</h3>
@@ -70,21 +70,33 @@ $members = $membersQuery->posts;
                             <?php echo $home->renderTagsSidebar($tags); ?>
                         </div>
                     </div>
-                    <div class="most-used-tags">
+                    <div class="side-card most-used-tags">
                         <h3 class="most-used-tags-title">Tags épingles</h3>
                         <div class="content">
                             <?php echo $home->renderTagsSidebar($tags); ?>
                         </div>
                     </div>
                 </div>
-                <div class="bubble-facebook">
-                    <img class="bubble-facebook-image" src=<?= get_theme_file_uri('/images/french-map.png'); ?> alt="">
-                    <div class="bubble-facebook-text">
-                        <h4 class="bubble-facebook-text-title">Hey !</h4>
-                        <p class="bubble-facebook-text-content">vous voulez rejoindre la communauté des amis de Finance
-                            Watch</p>
+                <div class="facebook-action">
+                    <div class="card-facebook">
+                        <div class="svg-container">
+                            <img src="<?php echo get_template_directory_uri() ?>/images/planet.svg" alt="">
+                        </div>
+                        <div class="text-container">
+                            <div class="subtitle">
+                                <h4>
+                                    HEY !
+                                </h4>
+                                <p>
+                                    vous voulez rejoindre la communauté des amis de la finance
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bubble-facebook-button"></div>
+                    <a href="" class="facebook-button">
+                        <img src="<?php echo get_template_directory_uri()?>/images/f-thumb.svg" alt="">
+                        rejoindre le group
+                    </a>
                 </div>
             </div>
         </div>
@@ -99,7 +111,23 @@ $members = $membersQuery->posts;
         </div>
     </div>
     <div class="member-testimonials-container">
-        <?php $home->members($members); ?>
+        <div class="swiper-testimonials l-col-14 d-col-14 t-grid m-grid">
+            <h3 class="testimonial-title">Nor membres parlent</h3>
+            <div class="swiper-wrapper pinned-article-wrapper d-grid l-grid t-grid m-grid">
+                    <?php $home->members($members); ?>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="learn-more-wrapper">
+        <div class="text-wrapper">
+            Vous souhaitez en savoir plus sur nos membres
+        </div>
+        <a class="btn btn-arrow btn-border btn-a-propos">
+            <span> <span class="arrow">&gt;</span>  A propos <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
+        </a>
     </div>
 </div>
 <?php get_footer() ?>

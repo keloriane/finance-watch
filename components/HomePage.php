@@ -249,9 +249,10 @@ class Homepage {
     function getMemberItem($member)
     {
         return <<<HEREDOC
-             <article class="members">             
+             <article class="members swiper-slide">             
                <img  class="members-image" src="{$member->image['sizes']['medium']}" alt="">   
                <div class="members-content">
+               <h3>Nos membres parlent</h3>
                <div class="members-testimonial">$member->testimonial</div>
                      <h4  class="members-title">{$member->wp->post_title}</h4> 
                 </div> 
