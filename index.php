@@ -22,9 +22,12 @@ $highlights = get_field('highlights');
 $idFirstArticle = $highlights['first_article']->ID;
 $idSecondArticle = $highlights['second_article']->ID;
 $tags = get_tags();
+
+
 ?>
 
 <?php get_header() ?>
+
 
 <div class="highlights-container">
     <div class="highlights-title-wrapper d-grid l-grid t-grid m-grid">

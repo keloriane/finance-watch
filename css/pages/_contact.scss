@@ -1,0 +1,40 @@
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  .contact-info {
+    display: flex;
+    align-items: center;
+    .inner-contact {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-left: 20px;
+
+    }
+
+    h3 {
+      font-family: "Rubik SemiBold" , sans-serif;
+      font-size: 35px;
+      color: #212975;
+      margin-bottom: 10px;
+
+    }
+    p {
+      font-family: "Rubik Light" , sans-serif;
+      color: #666666;
+      font-size: 18px;
+      font-weight: 100;
+
+      margin-bottom: 10px;
+    }
+    a {
+      font-family: "Rubik Light" , sans-serif;
+      margin-bottom: 10px;
+      color: #666666;
+      font-size: 18px;
+      font-weight: 100;
+    }
+
+  }
+}

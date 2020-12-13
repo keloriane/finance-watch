@@ -43,6 +43,20 @@
             </div>
         </div>
     </div>
+    <div class="underline-footer">
+
+        <div class="logo-container">
+            <img src="<?php echo get_template_directory_uri()?>/images/finance-watch-logo.svg" alt="">
+        </div>
+        <div class="gdpr-links">
+            <ul>
+                <li><a href=""> Protection des données </a> </li>
+                <li><a href=""> Terms and Conditions </a> </li>
+                <li><a href=""> Cookie policy </a> </li>
+
+            </ul>
+        </div>
+    </div>
 </footer>
 <?php wp_footer(); ?>
 </body>
