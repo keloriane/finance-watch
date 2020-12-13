@@ -1,7 +1,6 @@
 <?php
 
-class Homepage
-{
+class Homepage {
 
     function renderTags($tags)
     {

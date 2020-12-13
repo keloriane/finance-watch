@@ -40,5 +40,11 @@ function sennza_register_cpt_member() {
     );
     register_post_type( 'member', $args );
 }
-?>
 
+
+add_filter('acf/settings/google_api_key', function () {
+    return 'AIzaSyDo77UBqCntbsSfn1gkYyRwuqgjToez-5A';
+});
+
+
+?>

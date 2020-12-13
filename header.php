@@ -15,14 +15,29 @@
         <div class="inner-header d-grid l-col-21 d-col-21 t-col-21 m-grid ">
             <nav class="center">
                 <?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'nav-bar')) ?>
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri() ?>/images/youtube.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="social-list" >
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri() ?>/images/facebook-w.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
             </nav>
+
+
             |
         </div>
         <div class="sub-header">
+            <div class="inner-header-sub">
             <div class="logo-main">
-                <div class="logo-container">
+                <a href="<?php echo home_url(); ?>" class="logo-container">
                     <img src="<?php echo get_template_directory_uri() ?>/images/logo-FW.svg" alt="">
-                </div>
+                </a>
                 <div class="header-title">
                     <h2>
                         Changer la finance
@@ -30,21 +45,18 @@
                     <h3>
                         Un blog des membres et des amis de Finance Watch en France
                     </h3>
-                   
+
                 </div>
             </div>
             <div class="header-action">
-                <div class="search-input ">
-                    <form action="http://financewatch.test/" action="get" >
-                        <input type="text" placeholder="Search..." class="search-btn">
-                        <input type="submit" class="submit-btn">
-                    </form>
-                </div>
-                <div class="search-button">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/loupe.svg" alt="">
-                </div>
+
+                <form action="<?php get_site_url();?>/FW-BLOG/search/"  class="search-form" method="get">
+                    <input type="submit" value="" class="search-submit">
+                    <input aria-label="search" type="search" name="search_text" class="search-text" placeholder="Search..." autocomplete="on">
+                </form>
+
                 <button class="menu-call-to-action" id="menu-phone">
-                    menu &#9578;
+                    menu 	&#x2630;
                 </button>
                 <button class="participate">
                     Participer
@@ -53,6 +65,8 @@
                     Vers Finance-Watch.org
                 </button>
 
+
+            </div>
 
             </div>
 
@@ -66,9 +80,11 @@
         <div class="logo-container">
             <img src="<?php echo get_template_directory_uri() ?>/images/finance-watch-logo.svg" alt="logo">
         </div>
-        <div class="form-container">
-            <form action="">
-                <input type="search">
+        <div class="form-container-burger">
+            <form action="<?php get_site_url();?>/FW-BLOG/search/"  class="search-form" method="get">
+                <input type="submit" value="" class="submit-burger">
+                <img src="<?php echo get_template_directory_uri() ?>/images/loupe-w.svg" alt="">
+                <input aria-label="search" type="search" name="search_text" class="search-burger" placeholder="Search..." autocomplete="on">
             </form>
             <button class="menu-handle" id="menu-handler">
                 close X
@@ -98,6 +114,25 @@
             <a href="">Finance-watch.org</a>
         </div>
 
+        <div class="menu-line">
+
+        </div>
+        <div class="social-mobile-menu">
+            <div class="news-letter">
+                <h3>
+                    Newsletter
+                </h3>
+                <p>
+                    inscrivez pour rester informé
+                </p>
+                <a href="">
+                    s'inscrire
+                </a>
+            </div>
+            <div class="follow-us">
+
+            </div>
+        </div>
     </div>
 </div>
 
