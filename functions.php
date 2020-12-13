@@ -11,4 +11,34 @@ CustomTheme::addSupport("menus" , "header" , "menu-header");
 CustomTheme::addScript('swiper-js','https://unpkg.com/swiper/swiper-bundle.min.js', NULL, '1.0', true);
 CustomTheme::addScript('custom-script',get_theme_file_uri('/js/scripts.js'), NULL, '1.0', true);
 
+add_action( 'init', 'sennza_register_cpt_member' );
+
+function sennza_register_cpt_member() {
+    $args = array(
+        'public' => true,
+        'query_var' => 'member',
+        'rewrite' => array(
+            'slug' => 'members',
+            'with_front' => false
+        ),
+        'supports' => array(
+            'title',
+            'revisions'
+        ),
+        'labels' => array(
+            'name' => 'Members',
+            'singular_name' => 'Member',
+            'add_new' => 'Add New Member',
+            'add_new_item' => 'Add New Member',
+            'edit_item' => 'Edit Member',
+            'new_item' => 'New Member',
+            'view_item' => 'View Member',
+            'search_items' => 'Search Members',
+            'not_found' => 'No members found',
+            'not_found_in_trash' => 'No members found in Trash',
+        ),
+    );
+    register_post_type( 'member', $args );
+}
 ?>
+

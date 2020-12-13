@@ -57,6 +57,19 @@ class Homepage
         echo $render;
     }
 
+    function members($members)
+    {
+        $render = "";
+        foreach ($members as $memberItem) {
+            $memberACF = get_field('member_info', $memberItem->ID);
+            $member = (object)$memberACF;
+            $member->wp = $memberItem;
+            $render .= $this->getMemberItem($member,$member->ID);
+        };
+
+        echo $render;
+    }
+
     function pinnedArticles($articles)
     {
         $render = "";
@@ -91,32 +104,31 @@ class Homepage
                   </div>
                   <div class="main-highlight-content">
                     <p class="main-highlight-top">
-                        <span class="date">{$mainHighlight->date}</span> 
+                        <span class="main-highlight-top-date">{$mainHighlight->date}</span> 
                         <span class="vertical-line">|</span>
-                        <span class="tags">{$displayTags}</span>
+                        <span class="main-highlight-top-tags">{$displayTags}</span>
                     </p>
                     <div class="main-highlight-middle">
                             <div class="main-highlight-middle-excerpt">{$mainHighlight->contenu}</div> 
-                   
-                    </div>
+                    </div>    
                     <div class="main-highlight-bottom">
                       <div class="main-highlight-bottom-item custom-article-comments">
                         <img class="main-highlight-comment-icon" src="{$commentsImagePath}" alt="">
                         <span class="main-highlight-comment-count">10</span>
-                    </div>
-                    <span class="vertical-line">|</span>
-                    <div class="main-highlight-bottom-item custom-article-author">
+                      </div>
+                      <span class="vertical-line">|</span>
+                      <div class="main-highlight-bottom-item custom-article-author">
                         <span class="by">Par</span>
                         <span class="main-highlight-author">{$auteur->user_nicename}</span>
-                    </div>
+                      </div>
+                  </div>           
                   </div>
-                  </div>        
                 </article>
             </a>
         HEREDOC;
     }
 
-    function getHighLight($highlight,$id)
+    function getHighLight($highlight, $id)
     {
         $tags = $highlight->tags;
         $auteur = (object)$highlight->auteur;
@@ -155,7 +167,7 @@ class Homepage
          HEREDOC;
     }
 
-    function getLastsArticlesItem($article,$id)
+    function getLastsArticlesItem($article, $id)
     {
         $tags = $article->tags;
         $auteur = (object)$article->auteur;
@@ -195,7 +207,7 @@ class Homepage
          HEREDOC;
     }
 
-    function getPinnedArticleItem($article,$id)
+    function getPinnedArticleItem($article, $id)
     {
         $tags = $article->tags;
         $auteur = (object)$article->auteur;
@@ -204,7 +216,7 @@ class Homepage
 
         return <<<HEREDOC
          <a href={$this->getTheLink($id)}>
-             <article class='pinned-article-item'>
+             <article class='pinned-article-item swiper-slide'>
               <div class='pinned-article-item-featured-image-wrapper'>
                 <img class='pinned-article-item-featured-image' src="{$article->featured_image}" alt="">    
               </div>
@@ -235,7 +247,20 @@ class Homepage
          HEREDOC;
     }
 
-    function getMostReadArticleItem($article,$id)
+    function getMemberItem($member)
+    {
+        return <<<HEREDOC
+             <article class="members">             
+               <img  class="members-image" src="{$member->image['sizes']['medium']}" alt="">   
+               <div class="members-content">
+               <div class="members-testimonial">$member->testimonial</div>
+                     <h4  class="members-title">{$member->wp->post_title}</h4> 
+                </div> 
+             </article>
+         HEREDOC;
+    }
+
+    function getMostReadArticleItem($article, $id)
     {
         $tags = $article->tags;
         $displayTags = $this->renderTags($tags);
