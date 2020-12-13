@@ -9,71 +9,71 @@
 
 </head>
 <body>
-<header>
-    <div class="header-wrapper">
-
-        <div class="inner-header d-grid l-col-21 d-col-21 t-col-21 m-grid ">
-            <nav class="center">
-                <?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'nav-bar')) ?>
-                <ul class="social-list">
-                    <li class="social-item">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri() ?>/images/youtube.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="social-list" >
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri() ?>/images/facebook-w.svg" alt="">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-
-            |
-        </div>
-        <div class="sub-header">
-            <div class="inner-header-sub">
-            <div class="logo-main">
-                <a href="<?php echo home_url(); ?>" class="logo-container">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/logo-FW.svg" alt="">
-                </a>
-                <div class="header-title">
-                    <h2>
-                        Changer la finance
-                    </h2>
-                    <h3>
-                        Un blog des membres et des amis de Finance Watch en France
-                    </h3>
-
-                </div>
-            </div>
-            <div class="header-action">
-
-                <form action="<?php get_site_url();?>/FW-BLOG/search/"  class="search-form" method="get">
-                    <input type="submit" value="" class="search-submit">
-                    <input aria-label="search" type="search" name="search_text" class="search-text" placeholder="Search..." autocomplete="on">
-                </form>
-
-                <button class="menu-call-to-action" id="menu-phone">
-                    menu 	&#x2630;
-                </button>
-                <button class="participate">
-                    Participer
-                </button>
-                <button class="call-to-finance">
-                    Vers Finance-Watch.org
-                </button>
-
-
-            </div>
-
-            </div>
-
-
-        </div>
-    </div>
-</header>
+<!--<header>-->
+<!--    <div class="header-wrapper">-->
+<!---->
+<!--        <div class="inner-header d-grid l-col-21 d-col-21 t-col-21 m-grid ">-->
+<!--            <nav class="center">-->
+<!--                --><?php //wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'nav-bar')) ?>
+<!--                <ul class="social-list">-->
+<!--                    <li class="social-item">-->
+<!--                        <a href="#">-->
+<!--                            <img src="--><?php //echo get_template_directory_uri() ?><!--/images/youtube.svg" alt="">-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li class="social-list" >-->
+<!--                        <a href="#">-->
+<!--                            <img src="--><?php //echo get_template_directory_uri() ?><!--/images/facebook-w.svg" alt="">-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </nav>-->
+<!---->
+<!---->
+<!--            |-->
+<!--        </div>-->
+<!--        <div class="sub-header">-->
+<!--            <div class="inner-header-sub">-->
+<!--            <div class="logo-main">-->
+<!--                <a href="--><?php //echo home_url(); ?><!--" class="logo-container">-->
+<!--                    <img src="--><?php //echo get_template_directory_uri() ?><!--/images/logo-FW.svg" alt="">-->
+<!--                </a>-->
+<!--                <div class="header-title">-->
+<!--                    <h2>-->
+<!--                        Changer la finance-->
+<!--                    </h2>-->
+<!--                    <h3>-->
+<!--                        Un blog des membres et des amis de Finance Watch en France-->
+<!--                    </h3>-->
+<!---->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="header-action">-->
+<!---->
+<!--                <form action="--><?php //get_site_url();?><!--/FW-BLOG/search/"  class="search-form" method="get">-->
+<!--                    <input type="submit" value="" class="search-submit">-->
+<!--                    <input aria-label="search" type="search" name="search_text" class="search-text" placeholder="Search..." autocomplete="on">-->
+<!--                </form>-->
+<!---->
+<!--                <button class="menu-call-to-action" id="menu-phone">-->
+<!--                    menu 	&#x2630;-->
+<!--                </button>-->
+<!--                <button class="participate">-->
+<!--                    Participer-->
+<!--                </button>-->
+<!--                <button class="call-to-finance">-->
+<!--                    Vers Finance-Watch.org-->
+<!--                </button>-->
+<!---->
+<!---->
+<!--            </div>-->
+<!---->
+<!--            </div>-->
+<!---->
+<!---->
+<!--        </div>-->
+<!--    </div>-->
+<!--</header>-->
 
 <div class="hamburger-menu" id="hamburger-menu">
     <div class="menu-header">

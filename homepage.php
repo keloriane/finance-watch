@@ -11,11 +11,15 @@ $lastsPosts = get_posts(array(
     'order' => 'DESC',
 ));
 
-$mostReadPosts = get_posts(array(
+$mostReadPosts = new WP_Query(array(
     'posts_per_page' => 3,
     'post_type' => 'post',
-    'order' => 'DESC',
+    'meta_key' => 'customArticle_vues',
+    'orderby' => 'meta_value',
+    'order' => 'DESC'
 ));
+
+$mostReadPostsByViews =  $mostReadPosts->posts;
 
 $idMainHighlight = get_field('main_highlight')->ID;
 $highlights = get_field('highlights');
@@ -60,7 +64,7 @@ $members = $membersQuery->posts;
             <div class="homepage-sidebar-wrapper d-col-7 l-col-7 t-col-24">
                 <div class="most-read-articles-list">
                     <h2 class="most-read-articles-list-title">ARTICLES LES PLUS LUS</h2>
-                    <?php $home->mostReadArticles($mostReadPosts); ?>
+                    <?php $home->mostReadArticles($mostReadPostsByViews); ?>
                 </div>
                 <div class="homepage-sidebar-tags">
                     <h2 class="most-read-articles-list-title">NAVIGATION</h2>

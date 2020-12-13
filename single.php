@@ -6,14 +6,20 @@
 get_header();
 require('components/Post.php');
 require('components/HomePage.php');
-$post = new Post();
-$postACF = $post->get(get_the_ID());
+global $post;
+$Post = new Post();
+$postACF = $Post->get(get_the_ID());
 $home = new HomePage();
 $mostReadPosts = get_posts(array(
     'posts_per_page' => 3,
     'post_type' => 'post',
     'order' => 'DESC',
 ));
+
+$views = $postACF->vues;
+$views++;
+update_field('customArticle_vues',$views, get_the_ID());
+
 ?>
 
 <main class="post-details">
