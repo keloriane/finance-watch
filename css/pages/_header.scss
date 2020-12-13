@@ -175,6 +175,7 @@ header {
     justify-content: space-between;
     .form-container {
       display: flex;
+
       form {
         input {
           height: 49px;
@@ -352,6 +353,9 @@ input.search-text::-webkit-search-cancel-button {
 .form-container-burger {
   display: flex;
   align-items: center;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+  height: 161px;
   button {
     font-weight: 800;
     color: white;
