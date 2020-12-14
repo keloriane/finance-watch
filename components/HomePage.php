@@ -175,9 +175,10 @@ class Homepage {
     {
         $tags = wp_get_post_tags($id);
         $auteur = (object)$article->auteur;
-        $commentsImagePath = get_theme_file_uri('/images/comments-dark.svg');
+        $commentsImagePath = get_theme_file
+        _uri('/images/comments-dark.svg');
         $displayTags = $this->renderTags($tags);
-
+        var_dump($article);
         return <<<HEREDOC
          <a href={$this->getTheLink($id)}>
              <article class='last-article-item'>

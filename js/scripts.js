@@ -8,18 +8,18 @@ const searchInput = document.getElementById("submit-btn");
 
 
 
-menuHandle.addEventListener("click" , function(){
-
-
-    menu.classList.remove("open");
-
-})
-
-menuDisplay.addEventListener('click' , function() {
-    console.log("click");
-    menu.classList.add('open')
-    gsap.from(menu , .5 , {x:"100%" } )
-})
+// menuHandle.addEventListener("click" , function(){
+//
+//
+//     menu.classList.remove("open");
+//
+// })
+//
+// menuDisplay.addEventListener('click' , function() {
+//     console.log("click");
+//     menu.classList.add('open')
+//     gsap.from(menu , .5 , {x:"100%" } )
+// })
 
 
 const swiper = new Swiper('.swiper-container', {
@@ -41,9 +41,9 @@ const swiper = new Swiper('.swiper-container', {
         }
     }
 })
-searchBtn.addEventListener("click" , function ( ) {
-    console.log('listening')
-    inputSearch.style.visibility = "visible"
-    searchInput.style.visibility = "visible"
-    gsap.from(inputSearch, .3 , { width:0 })
-});
+// searchBtn.addEventListener("click" , function ( ) {
+//     console.log('listening')
+//     inputSearch.style.visibility = "visible"
+//     searchInput.style.visibility = "visible"
+//     gsap.from(inputSearch, .3 , { width:0 })
+// });
