@@ -341,7 +341,8 @@ button {
 
 .btn-border {
   background-color: transparent;
-  color: #358FFE; }
+  color: #358FFE;
+  width: 165px; }
 
 .btn-arrow {
   position: relative;
@@ -416,7 +417,8 @@ button {
 .bp-button {
   margin-left: 0 !important;
   margin-top: 20px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  width: 246px; }
 
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------ */
@@ -1258,6 +1260,45 @@ textarea {
     .post-details .main-article .article-body .side-bar-info .navigation-container .tagger .tag-wrapper {
       justify-content: center; } }
 
+.comment-action .comment-inner-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.comment-action #comments {
+  color: #212975; }
+
+.comment-action .comment-body {
+  border-radius: 5px;
+  box-shadow: 4px -4px 14px rgba(0, 0, 0, 0.25);
+  padding: 20px; }
+
+.comment-action #commentform > p.comment-form-comment {
+  display: flex;
+  flex-direction: column; }
+
+.comment-action #commentform > p.logged-in-as {
+  display: flex;
+  justify-content: space-between; }
+
+.comment-action #comment-form {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column; }
+  .comment-action #comment-form p {
+    display: flex;
+    color: #666666;
+    font-family: "Roboto Mono" , monospace; }
+  .comment-action #comment-form .logged-in-as {
+    display: flex; }
+
+.comment-action ol li {
+  list-style: none;
+  margin: 5px;
+  background-color: #fff; }
+  .comment-action ol li:before {
+    display: none !important; }
+
 .media-list {
   list-style: none;
   padding: 0 !important; }
@@ -1267,6 +1308,19 @@ textarea {
 
 .cls-2 {
   fill: #358ffe !important; }
+
+textarea {
+  color: #666666;
+  font-family: "Roboto Mono" , monospace; }
+
+#submit {
+  height: 50px;
+  background-color: #358FFE;
+  color: white;
+  font-family: "Rubik Medium" , sans-serif;
+  border: none;
+  border-radius: 5px;
+  padding: 7px; }
 
 .blog-partage header .blog-title-container h2 {
   font-weight: bold; }
@@ -1280,7 +1334,7 @@ textarea {
 
 .blog-partage .header-article {
   display: flex;
-  margin: 0 auto;
+  margin: 0 auto 140px;
   justify-content: space-between;
   flex-wrap: wrap; }
   .blog-partage .header-article .image-article {
@@ -1982,6 +2036,8 @@ textarea {
     height: 100%;
     overflow: hidden;
     margin: 0 auto; }
+    .member-testimonials-container .swiper-testimonials img {
+      max-width: 450px; }
   .member-testimonials-container .members {
     display: flex; }
 
@@ -2019,7 +2075,9 @@ textarea {
   font-family: "Roboto Mono Light" , monospace;
   font-size: 23px;
   font-weight: 100;
-  color: #7A7FAC; }
+  color: #7A7FAC;
+  width: 470px;
+  line-height: 37px; }
 
 .members-content {
   display: flex;
@@ -2042,6 +2100,50 @@ textarea {
 
 .member-testimonials-container {
   margin-top: 150px; }
+
+.highlights-title-wrapper h2 {
+  font-weight: 800;
+  font-size: 23px;
+  font-family: "Rubik Medium", sans-serif;
+  color: #0A246A; }
+
+.last-article-item p {
+  font-family: "Rubik Light" , sans-serif;
+  font-size: 15px;
+  color: #7A7FAC;
+  line-height: 24px; }
+
+.main-highlight-middle {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  .main-highlight-middle a div p {
+    color: white;
+    font-family: "Rubik Black" , sans-serif;
+    font-size: 30px; }
+
+.pinned-article-container-title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #0A246A;
+  text-transform: uppercase;
+  margin-top: 25px; }
+
+.card-layer {
+  position: relative;
+  margin: 220px auto; }
+  .card-layer .card-homepage {
+    box-shadow: 4px -4px 14px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    height: 265px;
+    position: absolute;
+    width: 800px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: -124px; }
 
 header {
   display: flex;
@@ -2087,6 +2189,9 @@ header {
         display: flex;
         align-items: center;
         padding-left: 20px; }
+        header .header-wrapper .sub-header .logo-main a {
+          border-right: 1px solid #9b9fc1;
+          padding-right: 36px; }
         header .header-wrapper .sub-header .logo-main .logo-container {
           margin-right: 40px; }
         header .header-wrapper .sub-header .logo-main .header-title {
@@ -2319,12 +2424,30 @@ input.search-text::-webkit-search-cancel-button {
       position: absolute;
       right: 25px; }
 
+.main-header {
+  background-color: #0A246A;
+  position: absolute;
+  top: 0;
+  width: 100vw; }
+  .main-header .navigation .menu-header-menu-container {
+    width: 50%;
+    margin: 0 auto; }
+    .main-header .navigation .menu-header-menu-container ul {
+      display: flex;
+      justify-content: space-evenly; }
+      .main-header .navigation .menu-header-menu-container ul li a {
+        color: white;
+        font-family: "Roboto Mono" , monospace;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 11px; }
+
 .main-footer {
   width: 100%;
   background-color: #0A246A;
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 165px;
   align-items: center; }
   .main-footer h3 {
     color: #358FFE;
@@ -2374,6 +2497,25 @@ input.search-text::-webkit-search-cancel-button {
             font-family: "Roboto Mono" , monospace;
             font-size: 13px;
             color: #CCE3FF; }
+      .main-footer .upper-footer .grid-footer .newsletter-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 40px; }
+        .main-footer .upper-footer .grid-footer .newsletter-footer p {
+          color: white;
+          font-family: "Roboto Mono" , monospace;
+          font-size: 12px; }
+        .main-footer .upper-footer .grid-footer .newsletter-footer a {
+          height: 50px;
+          width: 165px;
+          color: white;
+          font-family: "Rubik Medium" , sans-serif;
+          background-color: #358FFE;
+          border-radius: 5px;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center; }
 
 footer {
   display: flex;

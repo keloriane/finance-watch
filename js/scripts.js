@@ -58,12 +58,14 @@ const swiperTestimonial = new Swiper('.swiper-testimonials', {
 
 
 
+/*
 searchBtn.addEventListener("click" , function ( ) {
     console.log('listening')
     inputSearch.style.visibility = "visible"
     searchInput.style.visibility = "visible"
     gsap.from(inputSearch, .3 , { width:0 })
 });
+*/
 
 
 

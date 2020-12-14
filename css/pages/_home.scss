@@ -769,6 +769,9 @@ $breakpoint-l: 1340px;
     height: 100%;
     overflow: hidden;
     margin: 0 auto;
+    img {
+      max-width: 450px;
+    }
 
   }
   .members {
@@ -820,6 +823,9 @@ $breakpoint-l: 1340px;
   font-weight: 100;
   color: #7A7FAC;
 
+  width: 470px;
+  line-height: 37px;
+
 }
 }
 .members-content {
@@ -848,4 +854,72 @@ $breakpoint-l: 1340px;
 
 .member-testimonials-container {
   margin-top: 150px;
+}
+
+.highlights-title-wrapper {
+  h2 {
+    font-weight: 800;
+    font-size: 23px;
+    font-family: "Rubik Medium", sans-serif;
+    color: #0A246A;
+
+  }
+}
+
+.last-article-item {
+  p {
+    font-family: "Rubik Light" , sans-serif;
+    font-size: 15px;
+    color: #7A7FAC;
+    line-height: 24px;
+  }
+}
+
+.main-highlight-middle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  a {
+    div {
+      p {
+        color: white;
+        font-family: "Rubik Black" , sans-serif;
+        font-size: 30px;
+
+      }
+    }
+  }
+}
+
+.pinned-article-container-title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #0A246A;
+  text-transform: uppercase;
+  margin-top: 25px;
+
+
+}
+
+.card-layer {
+  position: relative;
+  margin: 220px auto;
+  .card-homepage {
+  box-shadow: 4px -4px 14px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    height: 265px;
+    position:absolute;
+    width: 800px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: -124px;
+
+
+
+
+
+  }
 }

@@ -10,20 +10,20 @@
 </head>
 <body>
 <header>
-    <div class="header-wrapper">
+    <!--<div class="header-wrapper">
 
         <div class="inner-header d-grid l-col-21 d-col-21 t-col-21 m-grid ">
             <nav class="center">
-                <?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'nav-bar')) ?>
+                <?php /*wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'nav-bar')) */?>
                 <ul class="social-list">
                     <li class="social-item">
                         <a href="#">
-                            <img src="<?php echo get_template_directory_uri() ?>/images/youtube.svg" alt="">
+                            <img src="<?php /*echo get_template_directory_uri() */?>/images/youtube.svg" alt="">
                         </a>
                     </li>
                     <li class="social-list" >
                         <a href="#">
-                            <img src="<?php echo get_template_directory_uri() ?>/images/facebook-w.svg" alt="">
+                            <img src="<?php /*echo get_template_directory_uri() */?>/images/facebook-w.svg" alt="">
                         </a>
                     </li>
                 </ul>
@@ -35,8 +35,8 @@
         <div class="sub-header">
             <div class="inner-header-sub">
             <div class="logo-main">
-                <a href="<?php echo home_url(); ?>" class="logo-container">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/logo-FW.svg" alt="">
+                <a href="<?php /*echo home_url(); */?>" class="logo-container">
+                    <img src="<?php /*echo get_template_directory_uri() */?>/images/logo-FW.svg" alt="">
                 </a>
                 <div class="header-title">
                     <h2>
@@ -50,7 +50,7 @@
             </div>
             <div class="header-action">
 
-                <form action="<?php get_site_url();?>/FW-BLOG/search/"  class="search-form" method="get">
+                <form action="<?php /*get_site_url();*/?>/FW-BLOG/search/"  class="search-form" method="get">
                     <input type="submit" value="" class="search-submit">
                     <input aria-label="search" type="search" name="search_text" class="search-text" placeholder="Search..." autocomplete="on">
                 </form>
@@ -61,6 +61,23 @@
             </div>
 
 
+        </div>
+    </div>-->
+    <div class="main-header">
+        <div class="navigation">
+            <ul>
+            <?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'nav-bar')) ?>
+                <li>
+                    <a href="">
+                        <img src="<?php echo get_template_directory_uri()?>/images/youtube.svg " alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="<?php echo get_template_directory_uri()?>/images/facebook-w.svg " alt="">
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </header>

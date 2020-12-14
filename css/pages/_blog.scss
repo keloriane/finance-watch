@@ -16,7 +16,7 @@
   }
   .header-article {
     display: flex;
-      margin: 0 auto;
+      margin: 0 auto 140px;
     justify-content: space-between;
     flex-wrap: wrap;
 
@@ -185,6 +185,9 @@
 
   }
 }
+
+
+
 
 @media (max-width: 1020px) {
   .debat .card-container .card img {

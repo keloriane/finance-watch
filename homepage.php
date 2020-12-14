@@ -11,11 +11,15 @@ $lastsPosts = get_posts(array(
     'order' => 'DESC',
 ));
 
-$mostReadPosts = get_posts(array(
+$mostReadPosts = new WP_Query(array(
     'posts_per_page' => 3,
     'post_type' => 'post',
-    'order' => 'DESC',
+    'meta_key' => 'customArticle_vues',
+    'orderby' => 'meta_value',
+    'order' => 'DESC'
 ));
+
+$mostReadPostsByViews =  $mostReadPosts->posts;
 
 $idMainHighlight = get_field('main_highlight')->ID;
 $highlights = get_field('highlights');
@@ -60,7 +64,7 @@ $members = $membersQuery->posts;
             <div class="homepage-sidebar-wrapper d-col-7 l-col-7 t-col-24">
                 <div class="side-card most-read-articles-list">
                     <h2 class="most-read-articles-list-title">ARTICLES LES PLUS LUS</h2>
-                    <?php $home->mostReadArticles($mostReadPosts); ?>
+                    <?php $home->mostReadArticles($mostReadPostsByViews); ?>
                 </div>
                 <div class=" side-card homepage-sidebar-tags">
                     <h2 class="most-read-articles-list-title">NAVIGATION</h2>
@@ -103,7 +107,7 @@ $members = $membersQuery->posts;
     </div>
     <div class="pinned-article-container">
         <div class="swiper-container">
-            <h3 class="pinned-article-container-title">ARTICLES "EPINGLES"</h3>
+            <h3 class="pinned-article-container-title">ARTICLES éPINGLéS</h3>
             <div class="swiper-wrapper pinned-article-wrapper d-grid l-grid t-grid m-grid">
                 <?php $home->pinnedArticles($mostReadPosts); ?>
             </div>
@@ -112,7 +116,7 @@ $members = $membersQuery->posts;
     </div>
     <div class="member-testimonials-container">
         <div class="swiper-testimonials l-col-14 d-col-14 t-grid m-grid">
-            <h3 class="testimonial-title">Nor membres parlent</h3>
+
             <div class="swiper-wrapper pinned-article-wrapper d-grid l-grid t-grid m-grid">
                     <?php $home->members($members); ?>
             </div>
@@ -128,6 +132,12 @@ $members = $membersQuery->posts;
         <a class="btn btn-arrow btn-border btn-a-propos">
             <span> <span class="arrow">&gt;</span>  A propos <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
         </a>
+    </div>
+
+    <div class="card-layer l-col-18 d-col-18 t-grid m-grid">
+        <div class="card-homepage">
+
+        </div>
     </div>
 </div>
 <?php get_footer() ?>

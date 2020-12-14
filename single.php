@@ -6,14 +6,20 @@
 get_header();
 require('components/Post.php');
 require('components/HomePage.php');
-$post = new Post();
-$postACF = $post->get(get_the_ID());
+global $post;
+$Post = new Post();
+$postACF = $Post->get(get_the_ID());
 $home = new HomePage();
 $mostReadPosts = get_posts(array(
     'posts_per_page' => 3,
     'post_type' => 'post',
     'order' => 'DESC',
 ));
+
+$views = $postACF->vues;
+$views++;
+update_field('customArticle_vues',$views, get_the_ID());
+
 ?>
 
 <main class="post-details">
@@ -35,7 +41,7 @@ $mostReadPosts = get_posts(array(
                     <div class="article-reply">
                         <img src="<?php echo get_template_directory_uri() ?>/images/msg.svg" alt="">
                         <p class="msg-count">
-                            25
+                            <?php echo get_comments_number() ?>
                         </p>
                     </div>
                 </div>
@@ -75,16 +81,33 @@ $mostReadPosts = get_posts(array(
                     <div class="line"></div>
                 </div>
 
-                <div class="article-action t-grid l-col-15 d-col-9 t-col-19 t-grid m-grid">
+                <div class="article-action l-col-12 d-col-12 t-col-16 t-grid m-grid">
                     <div class="comment-action-info">
-<!--                        <img src="<?php /*echo get_template_directory_uri(); */?>/images/msg.svg" alt="">
--->
+
                         <p>
-                            25 commentaires
                         </p>
                     </div>
                     <div class="comment-action">
-                        <p>Laisser un commentaire</p>
+                        <div class="comment-inner-head">
+                        <div class="comment-header">
+                        <img src="<?php /*echo get_template_directory_uri(); */?>/images/msg.svg" alt=""> <p><?php echo get_comments_number() ?> commentaires</p>
+
+                        </div>
+                            <div class="comment-action-display">
+
+                        <a>Laisser un commentaire</a>
+                            </div>
+
+                        </div>
+                        <?php
+
+
+
+                        if(comments_open() || get_comments_number()) {
+                            comments_template();
+                        }
+
+                        ?>
                     </div>
                 </div>
             </div>

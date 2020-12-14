@@ -14,8 +14,13 @@ class Homepage {
     function renderTagsSidebar($tags)
     {
         $tagsList = [];
+
+        $taglink = function($id){
+            return get_term_link($id);
+        };
+
         foreach ($tags as $tag) {
-            $tagsList[] = "<span class='sidebar-tag'>{$tag->name}({$tag->count})</span> ";
+            $tagsList[] = "<a href={$taglink($tag->term_id)} rel='tag'><span class='sidebar-tag'>{$tag->name}({$tag->count})</span></a>";
         }
         return implode('', $tagsList);
     }
@@ -24,7 +29,7 @@ class Homepage {
     {
         $render = "";
         foreach ($highlights as $highlightItem) {
-            $highlightArrayACF = get_field('custom_article', $highlightItem->ID);
+            $highlightArrayACF = get_field('customArticle', $highlightItem->ID);
             $highlight = (object)$highlightArrayACF;
             $render .= $this->getHighLight($highlight, $highlightItem->ID);
         };
@@ -36,7 +41,7 @@ class Homepage {
     {
         $render = "";
         foreach ($articles as $articleItem) {
-            $articleACF = get_field('custom_article', $articleItem->ID);
+            $articleACF = get_field('customArticle', $articleItem->ID);
             $article = (object)$articleACF;
             $render .= $this->getLastsArticlesItem($article, $articleItem->ID);
         };
@@ -48,7 +53,7 @@ class Homepage {
     {
         $render = "";
         foreach ($articles as $articleItem) {
-            $articleACF = get_field('custom_article', $articleItem->ID);
+            $articleACF = get_field('customArticle', $articleItem->ID);
             $article = (object)$articleACF;
             $render .= $this->getMostReadArticleItem($article, $articleItem->ID);
         };
@@ -73,7 +78,7 @@ class Homepage {
     {
         $render = "";
         foreach ($articles as $articleItem) {
-            $articleACF = get_field('custom_article', $articleItem->ID);
+            $articleACF = get_field('customArticle', $articleItem->ID);
             $article = (object)$articleACF;
             $render .= $this->getPinnedArticleItem($article, $articleItem->ID);
         };
@@ -88,11 +93,12 @@ class Homepage {
 
     function mainHighLight($idMainHighLight)
     {
-        $mainHighlight = (object)get_field('custom_article', $idMainHighLight);
-        $tags = $mainHighlight->tags;
+        $mainHighlight = (object)get_field('customArticle', $idMainHighLight);
+        $tags = wp_get_post_tags($idMainHighLight);
         $auteur = (object)$mainHighlight->auteur;
         $commentsImagePath = get_theme_file_uri('/images/comments-light.svg');
         $displayTags = $this->renderTags($tags);
+        $commentCount = get_comments_number($id);
 
         echo <<<HEREDOC
             <a href={$this->getTheLink($idMainHighLight)}>
@@ -113,7 +119,7 @@ class Homepage {
                     <div class="main-highlight-bottom">
                       <div class="main-highlight-bottom-item custom-article-comments">
                         <img class="main-highlight-comment-icon" src="{$commentsImagePath}" alt="">
-                        <span class="main-highlight-comment-count">10</span>
+                        <span class="main-highlight-comment-count">$commentCount</span>
                       </div>
                       <span class="vertical-line">|</span>
                       <div class="main-highlight-bottom-item custom-article-author">
@@ -129,10 +135,11 @@ class Homepage {
 
     function getHighLight($highlight, $id)
     {
-        $tags = $highlight->tags;
+        $tags = wp_get_post_tags($id);
         $auteur = (object)$highlight->auteur;
         $commentsImagePath = get_theme_file_uri('/images/comments-dark.svg');
         $displayTags = $this->renderTags($tags);
+        $commentCount = get_comments_number($id);
 
         return <<<HEREDOC
          <a href={$this->getTheLink($id)}>
@@ -152,7 +159,7 @@ class Homepage {
                   <div class="highlight-bottom">
                       <div class="highlight-bottom-item custom-article-comments">
                         <img class="highlight-comment-icon" src="{$commentsImagePath}" alt="">
-                        <span class="highlight-comment-count">10</span>
+                        <span class="highlight-comment-count">$commentCount</span>
                       </div>
                       <span class="vertical-line">|</span>
                       <div class="highlight-bottom-item custom-article-author">
@@ -168,10 +175,15 @@ class Homepage {
 
     function getLastsArticlesItem($article, $id)
     {
-        $tags = $article->tags;
+        $tags = wp_get_post_tags($id);
         $auteur = (object)$article->auteur;
         $commentsImagePath = get_theme_file_uri('/images/comments-dark.svg');
         $displayTags = $this->renderTags($tags);
+        $commentCount = get_comments_number($id);
+
+
+
+
 
         return <<<HEREDOC
          <a href={$this->getTheLink($id)}>
@@ -192,7 +204,7 @@ class Homepage {
                   <div class="last-article-item-bottom">
                       <div class="last-article-item-bottom-item custom-article-comments">
                         <img class="last-article-item-comment-icon" src="{$commentsImagePath}" alt="">
-                        <span class="last-article-item-comment-count">10</span>
+                        <span class="last-article-item-comment-count">$commentCount</span>
                       </div>
                       <span class="vertical-line">|</span>
                       <div class="last-article-item-bottom-item custom-article-author">
@@ -208,11 +220,12 @@ class Homepage {
 
     function getPinnedArticleItem($article, $id)
     {
-        $tags = $article->tags;
+        $tags = wp_get_post_tags($id);
         $auteur = (object)$article->auteur;
         $commentsImagePath = get_theme_file_uri('/images/comments-dark.svg');
         $displayTags = $this->renderTags($tags);
 
+        $commentCount = get_comments_number($id);
         return <<<HEREDOC
          <a href={$this->getTheLink($id)}>
              <article class='pinned-article-item swiper-slide'>
@@ -232,7 +245,7 @@ class Homepage {
                   <div class="pinned-article-item-bottom">
                       <div class="pinned-article-item-bottom-item custom-article-comments">
                         <img class="pinned-article-item-comment-icon" src="{$commentsImagePath}" alt="">
-                        <span class="pinned-article-item-comment-count">10</span>
+                        <span class="pinned-article-item-comment-count">  $commentCount </span>
                       </div>
                       <span class="vertical-line">|</span>
                       <div class="pinned-article-item-bottom-item custom-article-author">
@@ -262,7 +275,7 @@ class Homepage {
 
     function getMostReadArticleItem($article, $id)
     {
-        $tags = $article->tags;
+        $tags = wp_get_post_tags($id);
         $displayTags = $this->renderTags($tags);
 
         return <<<HEREDOC

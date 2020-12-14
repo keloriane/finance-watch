@@ -1,15 +1,20 @@
 <?php
 /**
- * Template Name: Blog Post
+ * Template Name: Tag Post
  */
 
 require('components/HomePage.php');
 $home = new HomePage();
-$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+$tag = get_queried_object();
+$currentTag = $tag->slug;
+
 $lastsPosts = get_posts(array(
+    'tag' => $currentTag,
     'posts_per_page' => 7,
     'post_type' => 'post',
-    'paged'   => $paged,
+    'paged' => $paged,
     'order' => 'DESC',
 ));
 
@@ -18,8 +23,9 @@ $mostReadPosts = get_posts(array(
     'post_type' => 'post',
     'meta_key' => 'vues',
     'orderby' => 'meta_value',
-    'order' => 'ASC'
+    'order' => 'DESC'
 ));
+
 
 $tags = get_tags();
 $argsPostMembers = array('post_type' => 'member');
@@ -34,7 +40,8 @@ $members = $membersQuery->posts;
 
 <div class="main-content">
     <div class="main-content-wrapper d-grid l-grid t-grid m-grid">
-        <h2>Derniers articles</h2>
+        <br><br>
+        <h2><?= $currentTag ?> articles</h2>
         <div class="main-content-columns">
             <div class="lasts-articles-list-wrapper d-col-15 l-col-15 t-col-24">
                 <div class="lasts-articles-list">

@@ -31,7 +31,7 @@
                     Inscrivez vous pour rester informé
                 </p>
                 <a href="">
-                    Subscribe
+                    <img src="<?php echo get_template_directory_uri() ?>/images/send-w.png" alt=""> Subscribe
                 </a>
             </div>
 
