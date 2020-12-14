@@ -25,7 +25,7 @@ $pinned_tags = new WP_Query(array(
 ));
 
 $pinned_posts = new WP_Query(array(
-    'title' => 'Homepage',
+    'title' => 'HomePage',
     'post_type' => 'pinned_post',
 ));
 
@@ -41,7 +41,11 @@ $idMainHighlight = get_field('main_highlight')->ID;
 $highlights = get_field('highlights');
 $idFirstArticle = $highlights['first_article']->ID;
 $idSecondArticle = $highlights['second_article']->ID;
-$tags = get_tags();
+$tags = get_tags(array(
+    'orderby' => 'count',
+    'order' => 'DESC',
+    'number' => '6',
+));
 //MEMBERS
 $argsPostMembers = array('post_type'=> 'member');
 $membersQuery = new WP_Query( $argsPostMembers );

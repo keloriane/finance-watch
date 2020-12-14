@@ -63,6 +63,7 @@
 
         </div>
     </div>-->
+    <div class="top-header">
     <div class="main-header">
         <div class="navigation">
             <ul>
@@ -79,6 +80,26 @@
                 </li>
             </ul>
         </div>
+    </div>
+        <div class="header-action">
+            <div class="title-main-logo">
+                <div class="logo-header">
+                    <a href="<?php echo home_url();?>" class="logo-container">
+
+                        <img src="<?php echo get_template_directory_uri() ?>/images/logo-FW.svg" alt="">
+                    </a>
+                </div>
+                <div class="title-header">
+                    <h1>
+                        Changer la finance
+                    </h1>
+                    <h4>
+                        Le blog des membres et des amis de finance watch en France
+                    </h4>
+                </div>
+            </div>
+        </div>
+
     </div>
 </header>
 

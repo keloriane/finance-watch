@@ -21,18 +21,27 @@ $views++;
 update_field('customArticle_vues',$views, get_the_ID());
 
 ?>
+<?php
 
+function dateToFrench($date, $format){
+    $english_days = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
+    $french_days = array('lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche');
+    $english_months = array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+    $french_months = array('janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre');
+    return str_replace($english_months, $french_months, str_replace($english_days, $french_days, date($format, strtotime($date) ) ) );
+}
+?>
 <main class="post-details">
     <article class="main-article">
         <div class="article-header t-col-16 t-grid m-grid">
-            <div class="title-container l-col-16 d-col-16 t-col-16 m-grid">
+            <div class="title-container l-col-21 d-col-21 t-col-21 m-grid">
                 <h3><?= $postACF->title ?></h3>
             </div>
             <div class="article-details d-col-21 l-col-21">
                 <div class="article-info">
                     <div class="date">
                         <p>
-                            27 Octobre 2020
+                            <?php echo dateToFrench($postACF -> date,' j F Y'); ?>
                         </p>
                     </div>
                     <div class="separator">

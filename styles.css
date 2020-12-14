@@ -17,6 +17,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@300;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@300;500;600&display=swap");
+html {
+  background-image: url("images/bg.png");
+  background-repeat: repeat;
+  background-color: #fff;
+  width: 100%;
+  height: 100%; }
+
 main {
   padding-top: 100px; }
 
@@ -260,12 +267,6 @@ header {
   .about-blog-wrapper {
     max-width: 580px;
     flex-direction: column; } }
-
-body {
-  background-image: url("images/bg.png") repeat;
-  background-color: #fff;
-  width: 100%;
-  height: 100%; }
 
 p {
   color: #666666;
@@ -1333,6 +1334,22 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.msg-icon {
+  width: 30px !important;
+  height: 30px !important;
+  max-width: inherit !important;
+  min-width: inherit !important; }
+
+.comment-body > div.comment-author.vcard > img {
+  width: 100%;
+  max-width: 40px !important;
+  min-width: 38px !important; }
+
+.comment-author {
+  display: flex; }
+  .comment-author img {
+    margin-right: 15px; }
 
 .blog-partage header .blog-title-container h2 {
   font-weight: bold; }
@@ -2445,23 +2462,32 @@ input.search-text::-webkit-search-cancel-button {
       position: absolute;
       right: 25px; }
 
-.main-header {
+.top-header .main-header {
   background-color: #0A246A;
-  position: absolute;
-  top: 0;
   width: 100vw; }
-  .main-header .navigation .menu-header-menu-container {
+  .top-header .main-header .navigation .menu-header-menu-container {
     width: 50%;
     margin: 0 auto; }
-    .main-header .navigation .menu-header-menu-container ul {
+    .top-header .main-header .navigation .menu-header-menu-container ul {
       display: flex;
       justify-content: space-evenly; }
-      .main-header .navigation .menu-header-menu-container ul li a {
+      .top-header .main-header .navigation .menu-header-menu-container ul li a {
         color: white;
         font-family: "Roboto Mono" , monospace;
         font-weight: 800;
         text-transform: uppercase;
         font-size: 11px; }
+
+.top-header .header-action .title-main-logo {
+  display: flex; }
+  .top-header .header-action .title-main-logo .title-header h1 {
+    font-family: "Rubik Medium" , sans-serif;
+    font-size: 34px;
+    color: #0A246A; }
+  .top-header .header-action .title-main-logo .title-header h4 {
+    font-size: 13px;
+    font-family: "Rubik Medium" , sans-serif;
+    color: #358FFE; }
 
 .main-footer {
   width: 100%;

@@ -14,7 +14,7 @@ CustomTheme::addScript('swiper-js','https://unpkg.com/swiper/swiper-bundle.min.j
 CustomTheme::addScript('custom-script',get_theme_file_uri('/js/scripts.js'), NULL, '1.0', true);
 
 
-
+add_filter('show_admin_bar', '__return_false');
 function register_my_menus() {
     register_nav_menus(
         array(

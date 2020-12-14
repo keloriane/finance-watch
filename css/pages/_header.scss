@@ -394,11 +394,10 @@ input.search-text::-webkit-search-cancel-button {
     }
   }
 }
-
+.top-header {
 .main-header {
   background-color: #0A246A;
-  position: absolute;
-  top: 0;
+
   width: 100vw;
   .navigation {
     .menu-header-menu-container {
@@ -420,5 +419,24 @@ input.search-text::-webkit-search-cancel-button {
     }
     }
   }
+}
+.header-action {
+  .title-main-logo {
+    display: flex;
+    .title-header {
+      h1 {
+        font-family: "Rubik Medium" , sans-serif;
+        font-size: 34px;
+        color: #0A246A;
+      }
+      h4 {
+        font-size: 13px;
+        font-family: "Rubik Medium" , sans-serif;
+        color: #358FFE;
+      }
+    }
+  }
+}
+
 }
 
