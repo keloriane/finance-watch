@@ -262,7 +262,10 @@ header {
     flex-direction: column; } }
 
 body {
-  background-image: url("./images/bg.png"); }
+  background-image: url("images/bg.png") repeat;
+  background-color: #fff;
+  width: 100%;
+  height: 100%; }
 
 p {
   color: #666666;
@@ -1322,19 +1325,32 @@ textarea {
   border-radius: 5px;
   padding: 7px; }
 
+.msg-icon {
+  width: inherit !important;
+  margin: 0px 5px 0px 0px !important; }
+
+.comment-header {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .blog-partage header .blog-title-container h2 {
   font-weight: bold; }
 
 .blog-partage header .blog-subtitle {
   margin: 0 auto; }
   .blog-partage header .blog-subtitle h3 {
-    font-family: "Rubik" , sans-serif;
-    font-weight: 300;
-    color: #0A246A; }
+    font-family: "Rubik Medium" , sans-serif;
+    line-height: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #0A246A;
+    text-align: center;
+    font-size: 23px; }
 
 .blog-partage .header-article {
   display: flex;
-  margin: 0 auto 140px;
+  margin: 40px auto 140px;
   justify-content: space-between;
   flex-wrap: wrap; }
   .blog-partage .header-article .image-article {
@@ -1342,6 +1358,7 @@ textarea {
     .blog-partage .header-article .image-article img {
       width: 100%; }
   .blog-partage .header-article .text-article {
+    margin-left: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1872,11 +1889,15 @@ textarea {
 .sidebar-tag {
   color: #358FFE;
   background: #DDECFF;
-  display: block;
+  display: flex;
   padding: 8px;
   margin-bottom: 8px;
   margin-left: 8px;
-  border-radius: 4px; }
+  border-radius: 4px;
+  height: 21px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto mono" , monospace; }
 
 .bubble-facebook {
   background: #5386C6;
@@ -2522,9 +2543,10 @@ footer {
   flex-direction: column; }
   footer .underline-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 75%;
-    margin: 50px auto; }
+    margin: 50px auto;
+    flex-wrap: wrap; }
     footer .underline-footer .gdpr-links {
       display: flex;
       align-items: center;
@@ -2535,7 +2557,8 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        width: 100%; }
+        width: 100%;
+        flex-wrap: wrap; }
         footer .underline-footer .gdpr-links ul li a {
           font-family: "Roboto Mono" , monospace;
           font-size: 13px;
@@ -2544,6 +2567,18 @@ footer {
 @media (max-width: 550px) {
   .footer-card {
     display: none !important; } }
+
+@media (max-width: 650px) {
+  body > footer > div.upper-footer > div > div.menu-nav > div.newsletter-footer {
+    margin-left: 0 !important; }
+  body > footer > div.upper-footer > div > div.menu-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    body > footer > div.upper-footer > div > div.menu-nav a {
+      margin-top: 20px; } }
 
 .contact {
   display: flex;

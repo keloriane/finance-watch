@@ -10,7 +10,6 @@ $lastsPosts = get_posts(array(
     'post_type' => 'post',
     'order' => 'DESC',
 ));
-
 $mostReadPosts = new WP_Query(array(
     'posts_per_page' => 3,
     'post_type' => 'post',
@@ -18,21 +17,35 @@ $mostReadPosts = new WP_Query(array(
     'orderby' => 'meta_value',
     'order' => 'DESC'
 ));
+$pinned_tags = new WP_Query(array(
+    'post_type' => 'pinned_tag',
+    'title' => 'HomePage',
+    'suppress_filters' => FALSE, // <== enable filters
+    'order' => 'DESC'
+));
 
+$pinned_posts = new WP_Query(array(
+    'title' => 'Homepage',
+    'post_type' => 'pinned_post',
+));
+
+$idPinnedPost = $pinned_posts->post->ID;
+$pinnedPostsACF = get_field('pinnedPostList', $idPinnedPost);
+//PINNED_TAGS
+$idPinnedTags = $pinned_tags->post->ID;
+$pinnedTagsACF = get_field('pinnedTags', $idPinnedTags);
+//MOSTREAD_ARTICLE
 $mostReadPostsByViews =  $mostReadPosts->posts;
-
+//HIGHLIGHTS
 $idMainHighlight = get_field('main_highlight')->ID;
 $highlights = get_field('highlights');
 $idFirstArticle = $highlights['first_article']->ID;
 $idSecondArticle = $highlights['second_article']->ID;
 $tags = get_tags();
-
+//MEMBERS
 $argsPostMembers = array('post_type'=> 'member');
 $membersQuery = new WP_Query( $argsPostMembers );
 $members = $membersQuery->posts;
-
-
-
 ?>
 
 <?php get_header() ?>
@@ -71,11 +84,11 @@ $members = $membersQuery->posts;
                     <div class="pinned-tags">
                         <h3 class="pinned-tags-title">Tags épingles</h3>
                         <div class="content">
-                            <?php echo $home->renderTagsSidebar($tags); ?>
+                            <?php echo $home->renderTagsSidebar($pinnedTagsACF); ?>
                         </div>
                     </div>
                     <div class="side-card most-used-tags">
-                        <h3 class="most-used-tags-title">Tags épingles</h3>
+                        <h3 class="most-used-tags-title">Tags les plus utilisés</h3>
                         <div class="content">
                             <?php echo $home->renderTagsSidebar($tags); ?>
                         </div>
@@ -105,11 +118,12 @@ $members = $membersQuery->posts;
             </div>
         </div>
     </div>
+
     <div class="pinned-article-container">
         <div class="swiper-container">
             <h3 class="pinned-article-container-title">ARTICLES éPINGLéS</h3>
             <div class="swiper-wrapper pinned-article-wrapper d-grid l-grid t-grid m-grid">
-                <?php $home->pinnedArticles($mostReadPosts); ?>
+                <?php $home->pinnedArticles($pinnedPostsACF); ?>
             </div>
             <div class="swiper-pagination"></div>
         </div>

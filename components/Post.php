@@ -18,8 +18,9 @@ class Post
 
     function get($postId)
     {
-        var_dump($postId);
+
         return (object) get_field('customArticle', $postId);
     }
 
 }
+

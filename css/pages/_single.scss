@@ -584,3 +584,15 @@ textarea {
   border-radius: 5px;
   padding: 7px;
 }
+
+.msg-icon {
+  width: inherit !important;
+  margin: 0px 5px 0px 0px !important;
+
+}
+
+.comment-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

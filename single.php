@@ -90,7 +90,7 @@ update_field('customArticle_vues',$views, get_the_ID());
                     <div class="comment-action">
                         <div class="comment-inner-head">
                         <div class="comment-header">
-                        <img src="<?php /*echo get_template_directory_uri(); */?>/images/msg.svg" alt=""> <p><?php echo get_comments_number() ?> commentaires</p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/msg.svg" class="msg-icon" alt=""> <p><?php echo get_comments_number() ?> commentaires</p>
 
                         </div>
                             <div class="comment-action-display">
@@ -155,7 +155,7 @@ update_field('customArticle_vues',$views, get_the_ID());
                     <div class="most-used-tags tagger">
                         <div class="tag-title">
                             <h4>
-                                Tags associées
+                                Tags les plus utilisés
                             </h4>
                         </div>
                         <div class="tag-wrapper">

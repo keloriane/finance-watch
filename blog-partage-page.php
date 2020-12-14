@@ -21,11 +21,11 @@ get_header();
 
     </header>
 
-    <div class="header-article l-col-20 d-col-20 t-col-21 m-grid">
-        <div class="image-article l-col-9 d-col-9 t-col-14 m-grid">
+    <div class="header-article l-col-22 d-col-22 t-col-22 m-grid">
+        <div class="image-article l-col-12 d-col-12 t-col-14 m-grid">
             <img src="<?php the_field('header_image'); ?>" alt="">
         </div>
-        <div class="text-article l-col-10 d-col-10 t-col-14 m-grid">
+        <div class="text-article l-col-9 d-col-9 t-col-14 m-grid">
             <h3>
                 <?php the_field('header_titre'); ?>
             </h3>

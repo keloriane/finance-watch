@@ -98,7 +98,7 @@ class Homepage {
         $auteur = (object)$mainHighlight->auteur;
         $commentsImagePath = get_theme_file_uri('/images/comments-light.svg');
         $displayTags = $this->renderTags($tags);
-        $commentCount = get_comments_number($id);
+
 
         echo <<<HEREDOC
             <a href={$this->getTheLink($idMainHighLight)}>

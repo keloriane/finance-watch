@@ -556,11 +556,16 @@ $breakpoint-l: 1340px;
 .sidebar-tag {
   color: #358FFE;
   background: #DDECFF;
-  display: block;
+  display: flex;
   padding: 8px;
   margin-bottom: 8px;
   margin-left: 8px;
   border-radius: 4px;
+  height: 21px;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Roboto mono" , monospace;
 }
 
 .bubble-facebook {

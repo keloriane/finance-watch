@@ -117,10 +117,10 @@ footer {
   flex-direction: column;
   .underline-footer {
     display: flex;
-
-    justify-content: space-between;
-    width:75%;
+    justify-content: center;
+    width: 75%;
     margin: 50px auto;
+    flex-wrap: wrap;
     .gdpr-links {
       display: flex;
       align-items: center;
@@ -128,10 +128,11 @@ footer {
         max-width: 800px;
         width: 100%;
       ul {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
         width: 100%;
+        flex-wrap: wrap;
 
         li {
           a {
@@ -149,5 +150,22 @@ footer {
 @media (max-width: 550px) {
   .footer-card {
     display: none !important;
+  }
+
+}
+@media (max-width: 650px) {
+
+  body > footer > div.upper-footer > div > div.menu-nav > div.newsletter-footer {
+    margin-left: 0 !important;
+  }
+  body > footer > div.upper-footer > div > div.menu-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    a {
+      margin-top: 20px;
+    }
   }
 }
